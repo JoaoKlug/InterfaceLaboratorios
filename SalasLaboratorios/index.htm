@@ -5,44 +5,32 @@
         <title>TCC - Teste</title>
         <meta name="description" content="Este é o site de controle de salas e laboratórios do Institúto Federal do Paraná.">
         <meta name="author" content="Augusto, Pedro e João Gabriel">
-        <link href="css/main.css" type="text/css" rel="stylesheet" />
+        <link href="../Css/main.css" type="text/css" rel="stylesheet" />
         <meta charset="UTF-8">
-        
-        <script>
-            function relogio(){
-                var data = new Date();
-                var hora = new.getHours();
-                var min = new.getMinutes();
-                var seg = new.getSeconds();
-                var horario = hora+":"+min+":"+seg;
-                document.getElementById("rel").value = horario;
-            }
-            var tempo = setInterval(relogio,1000);
-        </script>
     </head>
 
     <body>
         <header>
             <nav>
-                <a class="logo" href="https://curitiba.ifpr.edu.br"><img src="img/LogoIFPR@1x.png"></a>
+                <a class="logo" href="https://curitiba.ifpr.edu.br"><img src="../Imagens/LogoIFPR@1x.png"></a>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
 
-                <div id="horas"></div>
+                <div id="dataHora"></div>
 
                 <ul class="nav-list">
                     <li><a href="">Inicio</a></li>
                     <li><a href="">Sobre o Projeto</a></li>
                     <li><a href="">Contatos</a></li>
-                    <li id="iconeuser"><a href=""><img src="img/IconeUsuario@1x.png"></a></li>
+                    <li id="iconeuser"><a href=""><img src="../Imagens/IconeUsuario@1x.png"></a></li>
                 </ul>
             </nav>
         </header>
         <main></main>
-        <script src="js/navbar.js"></script>
+        <script src="../Js/navbar.js"></script>
 
     </body>
 </html>
