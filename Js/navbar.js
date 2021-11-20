@@ -27,32 +27,40 @@ class MobileNavbar {
     }
   
     init() {
-      if (this.mobileMenu) {
-        this.addClickEvent();
-      }
+      this.addClickEvent();
       return this;
     }
-  }
+}
   
-  const mobileNavbar = new MobileNavbar(
-    ".mobile-menu",
-    ".nav-list",
-    ".nav-list li",
-  );
-  mobileNavbar.init();
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+   ".nav-list li",
+);
+mobileNavbar.init();
 
 
 function Relogio()
 {
   var momentoAtual = new Date();
+ 
   var dia = momentoAtual.getDate();
+  corrigir(dia);
   var mes = momentoAtual.getMonth()+1;
+  corrigir(mes);
   var ano = momentoAtual.getFullYear();
   var hora = momentoAtual.getHours();
+  corrigir(hora);
   var minuto = momentoAtual.getMinutes();
+  corrigir(minuto);
   var segundos = momentoAtual.getSeconds();
-
+  
+  function corrigir(i)
+  {
+    if(i<10)
+      return "0"+i
+  }
   var dataHora = dia+"/"+mes+"/"+ano+"  -  "+hora+":"+minuto+":"+segundos;
-
+  
   window.document.getElementById('dataHora').innerHTML = dataHora;
 } setInterval(Relogio,500);
