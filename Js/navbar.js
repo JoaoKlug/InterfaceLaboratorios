@@ -44,21 +44,21 @@ function Relogio()
 {
   var momentoAtual = new Date();
  
-  var dia = momentoAtual.getDate();
-  corrigir(dia);
-  var mes = momentoAtual.getMonth()+1;
-  corrigir(mes);
+  var dia = verificarDataHora(momentoAtual.getDate());
+  var mes = verificarDataHora(momentoAtual.getMonth())+1;
   var ano = momentoAtual.getFullYear();
-  var hora = momentoAtual.getHours();
-  corrigir(hora);
-  var minuto = momentoAtual.getMinutes();
-  corrigir(minuto);
-  var segundos = momentoAtual.getSeconds();
+  var hora = verificarDataHora(momentoAtual.getHours());
+  var minuto = verificarDataHora(momentoAtual.getMinutes());
+  var segundos = verificarDataHora(momentoAtual.getSeconds());
   
-  function corrigir(i)
+  function verificarDataHora(n)
   {
-    if(i<10)
-      return "0"+i
+    if(n<10){
+      return "0"+n;
+    }
+    else{
+      return n;
+    }
   }
   var dataHora = dia+"/"+mes+"/"+ano+"  -  "+hora+":"+minuto+":"+segundos;
   

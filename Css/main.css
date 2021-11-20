@@ -14,11 +14,11 @@
   }
   
   .logo {
-      margin-top: 6px;
+      margin-top: 5.5px;
       padding-top: flex;
   }
   
-  nav {
+  .cabecalho {
     display: flex;
     justify-content: space-around;
     align-items: center;
