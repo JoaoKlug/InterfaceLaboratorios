@@ -42,25 +42,20 @@ mobileNavbar.init();
 
 function Relogio()
 {
-  var momentoAtual = new Date();
+  const momentoAtual = new Date();
  
-  var dia = verificarDataHora(momentoAtual.getDate());
-  var mes = verificarDataHora(momentoAtual.getMonth())+1;
-  var ano = momentoAtual.getFullYear();
-  var hora = verificarDataHora(momentoAtual.getHours());
-  var minuto = verificarDataHora(momentoAtual.getMinutes());
-  var segundos = verificarDataHora(momentoAtual.getSeconds());
+  const dia = verificarDataHora(momentoAtual.getDate());
+  const mes = verificarDataHora(momentoAtual.getMonth())+1;
+  const ano = momentoAtual.getFullYear();
+  const hora = verificarDataHora(momentoAtual.getHours());
+  const minuto = verificarDataHora(momentoAtual.getMinutes());
+  const segundos = verificarDataHora(momentoAtual.getSeconds());
   
-  function verificarDataHora(n)
+  function verificarDataHora(tempo)
   {
-    if(n<10){
-      return "0"+n;
-    }
-    else{
-      return n;
-    }
+    return tempo <10 ? `0${tempo}` : tempo;
   }
-  var dataHora = dia+"/"+mes+"/"+ano+"  -  "+hora+":"+minuto+":"+segundos;
+  const dataHora = dia+"/"+mes+"/"+ano+"  -  "+hora+":"+minuto+":"+segundos;
   
-  window.document.getElementById('dataHora').innerHTML = dataHora;
-} setInterval(Relogio,500);
+  document.getElementById('dataHora').innerHTML = dataHora;
+} setInterval(Relogio,1000);

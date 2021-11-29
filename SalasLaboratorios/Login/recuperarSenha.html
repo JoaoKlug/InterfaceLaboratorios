@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Contatos</title>
-        <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>Esqueci minha Senha</title>
         <link href="../../Css/main.css" type="text/css" rel="stylesheet" />
+        <link href="../../Css/login.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
         <header>
@@ -27,5 +27,16 @@
                 </div>
             </nav>
         </header>
+
+        <div class="login-container">
+            <form action="../DirecaoEnsino/index.html">
+                <label for="usuario">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Digite seu nome de usuário" autocomplete="off" required>
+                <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="off" required>
+                <a href="../Login/index.html" id="submit">Recuperar Senha</a>
+                <!--<input type="submit" name="recuperarSenha" id="submit" value="Recuperar Senha">--> 
+            </form>
+        </div>
     </body>
 </html>

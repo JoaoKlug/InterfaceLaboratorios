@@ -1,10 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   }
   
   a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     transition: 0.3s;
   }
@@ -22,7 +23,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #6D74C6;
     height: flex;
   }
@@ -112,7 +112,7 @@
     border-style: solid;
     padding: 5px;
     padding-top: 4px;
-    border-color: #fff;
+    border-color: whitesmoke;
     border-radius: 10px;
     color: rgb(24, 7, 124);
   }

@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box; 
+    border:none;
+}
+.login-container{
+    background-color: #b5baeb;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 30px;
+    margin-top: 15vh;
+    border-radius: 10px;
+    text-align: center;
+}
+h1{
+    font-size: 2.5rem;
+}
+form{
+    margin-top: 2vh;
+}
+label,input,#submit{
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+label{
+    font-weight: bold;
+    margin-bottom: 0.60vh;
+    font-size: 1rem;
+}
+input,#submit{
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 1vh;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+#esqueceuSenha{
+    text-align: right;
+    display: block;
+    margin-bottom: 1.2vh;
+    margin-top: 0.80vh;
+    font-size: 0.95rem;
+    color:white;
+}
+#submit{
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 60px;
+    border:none;
+    background-color:#7d84d1;
+}
+p{
+    text-align: center;
+    color: red;
+    margin-top: 1vh;
+}

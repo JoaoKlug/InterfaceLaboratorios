@@ -5,11 +5,12 @@
         <title>Login</title>
         <script src= "../../Jquery\jquery-3.6.0.min.js"></script>
         <link href="../../Css/main.css" type="text/css" rel="stylesheet" />
+        <link href="../../Css/login.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
         <header>
             <nav>
-                <div class = "cabecalho" id="cabecalho">
+                <div class = "cabecalho">
                     <a class="logo" href="https://curitiba.ifpr.edu.br"><img src="../../Imagens/LogoIFPR@1x.png"></a>
                     <div class="mobile-menu">
                         <div class="line1"></div>
@@ -27,5 +28,20 @@
                 </div>
             </nav>
         </header>
+
+        
+        <div class="login-container">
+            <h1>Login</h1>
+            <form action="../DirecaoEnsino/index.html">
+                <label for="usuario">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Digite seu nome de usuário" autocomplete="off" required>
+                <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" autocomplete="off" required>
+                <a href="recuperarSenha.html" id="esqueceuSenha">Esqueceu sua senha?</a>
+                <a href="../DirecaoEnsino/index.html" id="submit">Logon</a>
+                <!--<input type="submit" name="login" id="submit" value="Entrar">--> 
+            </form>
+        </div><p>*Somente para a Direção de Ensino</p>
+
     </body>
 </html>
