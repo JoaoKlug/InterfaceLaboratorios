@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+  }
+  body{
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   }
   
@@ -15,7 +17,7 @@
   }
   
   .logo {
-      margin-top: 5.5px;
+      margin: 5.5px;
       padding-top: flex;
   }
   

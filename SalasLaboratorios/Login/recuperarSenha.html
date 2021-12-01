@@ -3,37 +3,35 @@
     <head>
         <meta charset="UTF-8">
         <title>Esqueci minha Senha</title>
-        <link href="../../Css/main.css" type="text/css" rel="stylesheet" />
         <link href="../../Css/login.css" type="text/css" rel="stylesheet"/>
+        <style type ="text/css">
+            * {
+                margin: 0;
+            } 
+            .login-container{
+                margin-top: 25vh;
+            }
+            body{
+                font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            a:hover {
+                 opacity: 0.7;
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <nav>
-                <div class = "cabecalho">
-                    <a class="logo" href="https://curitiba.ifpr.edu.br"><img src="../../Imagens/LogoIFPR@1x.png"></a>
-                    <div class="mobile-menu">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                    <div id="dataHora"></div>
-                    <ul class="nav-list">
-                        <li><a href="../index.htm">Inicio</a></li>
-                        <li><a href="../SobreProjeto/index.html">Sobre o Projeto</a></li>
-                        <li><a href="../Contato/index.html">Contatos</a></li>
-                        <li id="iconeuser"><a href="../Login/index.html"><img src="../../Imagens/IconeUsuario@1x.png"></a></li>
-                    </ul>
-                    <script src="../../Js/navbar.js"></script>
-                </div>
-            </nav>
-        </header>
-
         <div class="login-container">
+            <h1>Esqueci minha senha</h1>
             <form action="../DirecaoEnsino/index.html">
                 <label for="usuario">Usuario</label>
                     <input type="text" name="usuario" id="usuario" placeholder="Digite seu nome de usuário" autocomplete="off" required>
-                <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="off" required>
+                <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="off" required>
                 <a href="../Login/index.html" id="submit">Recuperar Senha</a>
                 <!--<input type="submit" name="recuperarSenha" id="submit" value="Recuperar Senha">--> 
             </form>
