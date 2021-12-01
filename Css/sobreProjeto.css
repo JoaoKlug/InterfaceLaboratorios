@@ -1,25 +1,32 @@
+@import url(main.css);
+
 h1{
   margin: 7vh 9.5% auto;
   font-size: 3rem;
 }
+
 hr{
   margin: 2vh 9.5%;
   border-top: 2px solid rgb(56, 54, 54) ;
 }
+
 .textoSobrePrjt{
   font-size: 1.4rem;
   margin: auto 10.5% auto;
   display: inline-block;
   overflow: clip;
 }
+
 p{
   text-align: justify;
   margin-top: 1vh;
 }
+
 #fechaduraImg{
   margin:  auto 0.5vh auto 2.5vh ;
   float: right;
 }
+
 h1,hr,.textoSobrePrjt{
   min-width: 800px;
 }
