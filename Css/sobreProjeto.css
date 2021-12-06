@@ -1,20 +1,19 @@
 @import url(main.css);
 
 h1{
-  margin: 7vh 9.5% auto;
-  font-size: 3rem;
+  margin: 7vh 0 0 7vw;
+  font-size: 3.125rem;
 }
 
 hr{
-  margin: 2vh 9.5%;
-  border-top: 2px solid rgb(56, 54, 54) ;
+  margin: 2vh 7vw;
+  border-top: 2px solid ;
 }
 
 .textoSobrePrjt{
-  font-size: 1.4rem;
-  margin: auto 10.5% auto;
+  font-size: 1.4375rem;
+  margin: auto 8vw auto;
   display: inline-block;
-  overflow: clip;
 }
 
 p{
@@ -23,10 +22,6 @@ p{
 }
 
 #fechaduraImg{
-  margin:  auto 0.5vh auto 2.5vh ;
+  margin-left:1vw ;
   float: right;
-}
-
-h1,hr,.textoSobrePrjt{
-  min-width: 800px;
 }

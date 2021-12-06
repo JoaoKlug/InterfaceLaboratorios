@@ -1,31 +1,23 @@
 @import url(main.css);
 
-.logo {
-    margin: 5.5px;
-    padding-top: flex;
-}
-
 .cabecalho {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: #6D74C6;
   height: flex;
+  padding: 0.345rem;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
-.nav-list li {
-  letter-spacing: 3px;
-  margin-left: 32px;
-  margin-top: 10px;
-}
-
-#iconeuser{
-    margin-top: 0px;
+.nav-list li:not(:last-child){
+  letter-spacing: 0.1875rem;
+  margin-right: 2rem;
 }
 
 .mobile-menu {
@@ -34,17 +26,21 @@
 }
 
 .mobile-menu div {
-  width: 32px;
-  height: 2px;
+  width: 2rem;
+  height: 0.125rem;
   background: #fff;
-  margin: 8px;
-  transition: 0.3s;
+  transition: 300ms;
+}
+.mobile-menu div:not(:last-child)
+{
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 62.4375rem) {
   body {
     overflow-x: hidden;
   }
+  
   .nav-list {
     position: absolute;
     top: 8vh;
@@ -56,10 +52,10 @@
     align-items: center;
     justify-content: space-around;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in;
+    transition: transform 300ms ease-in;
   }
-  .nav-list li {
-    margin-left: 0;
+  .nav-list li:not(:last-child){
+    margin-right: 0;
     opacity: 0;
   }
   .mobile-menu {
@@ -74,7 +70,7 @@
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(3.125rem);
   }
   to {
     opacity: 1;
@@ -83,7 +79,7 @@
 }
 
 .mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
+  transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
 }
 
 .mobile-menu.active .line2 {
@@ -91,14 +87,13 @@
 }
 
 .mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
+  transform: rotate(45deg) translate(-0.3125rem, -0.4375rem);
 }
 
 #dataHora {
   border-style: solid;
-  padding: 5px;
-  padding-top: 4px;
+  padding: 0.250rem 0.3125rem;
   border-color: whitesmoke;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: rgb(24, 7, 124);
 }

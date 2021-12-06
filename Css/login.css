@@ -1,16 +1,16 @@
 @import url(main.css);
 
 *{
-    box-sizing: border-box; 
-    border:none;
+    box-sizing: border-box;
+    border: none;
 }
 
 .login-container{
     background-color: #b5baeb;
-    width: 550px;
-    margin: 18vh auto 0px auto;
-    padding: 20px 30px;
-    border-radius: 10px;
+    width: 31.25rem;
+    padding: 1.25rem 1.875rem;
+    border-radius: 0.635rem;
+    margin: 14vh auto 0 auto;
 }
 
 label, form>a{
@@ -19,7 +19,7 @@ label, form>a{
 }
 
 h1{
-    font-size: 2.2rem;
+    font-size: 2.1875rem;
 }
 
 label, #esqueceuSenha, p{
@@ -41,15 +41,15 @@ label{
 }
 
 input,#submit{
-    padding: 10px;
-    font-size: 1.1rem;
+    padding: 0.625rem;
+    font-size: 1.125rem;
     background-color: whitesmoke;
-    border-radius: 10px;
+    border-radius:0.635rem;
 }
 
 #submit{
     text-transform: uppercase;
-    border-radius: 60px;
+    border-radius: 3.75rem;
     background-color:#7d84d1;
 }
 
@@ -60,6 +60,6 @@ input,#submit{
 }
 
 p{
-    color: red;
+    color:  red;
     margin-top: 1vh;
 }
