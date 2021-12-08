@@ -58,4 +58,4 @@ function Relogio()
   const dataHora = dia+"/"+mes+"/"+ano+"  -  "+hora+":"+minuto+":"+segundos;
   
   document.getElementById('dataHora').innerHTML = dataHora;
-} setInterval(Relogio,1000);
+} setInterval(Relogio,0);

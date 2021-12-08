@@ -1,0 +1,30 @@
+@import url(main.css);
+
+h1{
+  margin: 7vh 0 0 7vw;
+}
+
+hr{
+  margin: 2vh 7vw;
+  border-top: 2px solid ;
+}
+
+.contatos-container{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    margin: 0 14vw;
+  }
+.integrante{
+ padding: 0.75rem;
+}
+.informacoes{
+  display: inline-block;
+}
+.integrante>img{
+  float:left;
+  margin-right: 0.75rem;
+  height: 6.875rem;
+  width: 6.875rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
