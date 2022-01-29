@@ -45,7 +45,7 @@ function Relogio()
   const momentoAtual = new Date();
  
   const dia = verificarDataHora(momentoAtual.getDate());
-  const mes = verificarDataHora(momentoAtual.getMonth())+1;
+  const mes = verificarDataHora(momentoAtual.getMonth()+1);
   const ano = momentoAtual.getFullYear();
   const hora = verificarDataHora(momentoAtual.getHours());
   const minuto = verificarDataHora(momentoAtual.getMinutes());

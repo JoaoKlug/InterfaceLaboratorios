@@ -6,13 +6,13 @@ h1{
 
 hr{
   margin: 2vh 7vw;
-  border-top: 2px solid ;
+  border-top: 0.125rem solid ;
 }
 
 .contatos-container{
     display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    margin: 0 14vw;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    margin-left: 8vw;
   }
 .integrante{
  padding: 0.75rem;
