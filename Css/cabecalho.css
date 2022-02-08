@@ -13,6 +13,8 @@
   list-style: none;
   display: flex;
   align-items: center;
+  font-size: larger;
+  text-decoration-line: underline;
 }
 
 .nav-list li:not(:last-child){
@@ -43,10 +45,10 @@
   
   .nav-list {
     position: absolute;
-    top: 8vh;
+    top: 9vh;
     right: 0;
-    width: 50vw;
-    height: 92vh;
+    width: 45vw;
+    height: 91vh;
     background: #6D74C6;
     flex-direction: column;
     align-items: center;

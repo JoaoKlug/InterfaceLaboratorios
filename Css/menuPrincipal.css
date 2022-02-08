@@ -1,0 +1,50 @@
+.grid-andar3{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: gray;
+    margin: 20px;
+    padding: 10px;
+    padding-right: auto;
+    border-radius: 5px;
+    float: unset;
+  }
+  .labinfo{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 5px;
+  }
+  .sala-aula {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    margin: 2px;
+    width: auto;
+    height: auto;
+    font-size: 2ch;
+  }
+  
+  .sala-aula:hover{
+    cursor: pointer;
+    background-color: rgba(194, 183, 183, 0.753);
+  }
+  
+  /*Esses códigos foram tirados do site "https://www.w3schools.com/w3css/4/w3.css"*/
+  .modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+  .conteudo-modal{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+  .teal,.hover-teal:hover{color:#fff!important;background-color:#6D74C6!important}
+  .container,.panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+  .animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+  .black,.hover-black:hover{color:#fff!important;background-color:#000!important}
+  .fechar-modal{color: #000; float: right; background-color: antiquewhite; border-radius: 10%;}
+  .fechar-modal:hover{cursor: pointer;background-color: rgba(194, 183, 183, 0.753);}
+  .inputs-modal{margin-top:10px; margin-left: auto;}
+  /*Esses foram os códigos tirados do site "https://www.w3schools.com/w3css/4/w3.css"*/

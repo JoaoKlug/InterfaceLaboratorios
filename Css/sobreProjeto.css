@@ -2,15 +2,18 @@
 
 h1{
   margin: 7vh 0 0 7vw;
+  font-size: 3.125rem;
 }
 
 hr{
   margin: 2vh 7vw;
-  border-top: 0.125rem solid ;
+  border-top: 2px solid ;
 }
 
 .textoSobrePrjt{
+  font-size: 1.4375rem;
   margin: auto 8vw auto;
+  display: inline-block;
 }
 
 p{

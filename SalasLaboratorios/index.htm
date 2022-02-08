@@ -6,10 +6,11 @@
         <meta name="author" content="Augusto, Pedro e João Gabriel">
         <meta charset="UTF-8">
         <link href="../Css/cabecalho.css" type="text/css" rel="stylesheet" />
+        <link href="../Css/menuPrincipal.css" type="text/css" rel="stylesheet"/>
         <script src= "../../Jquery\jquery-3.6.0.min.js"></script>
     </head>
 
-    <body>
+    <body id="body">
         <header>
             <nav>
                 <div class = "cabecalho">
@@ -30,8 +31,124 @@
                 </div>
             </nav>
         </header>
+
+        <article id="laboratorios-ifpr">
+        <div class="grid-andar3">
+          <div class="labinfo">Terceiro Andar</div>
+            
+          <button onclick="document.getElementById('id302').style.display='block'" class="sala-aula">Laboratório 2</button>
+            <div id="id302" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id302').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório 2</h2>
+                </header>
+                <div class="container">
+                  <p>Laboratório normal, com 40 computadores, disponível pra todas as turmas</p>
+                  <br/><p>Disponibilidade: Disponível</p>
+                </div>
+                <footer class="container teal">
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal"type="submit">
+                  </form>
+                </footer>
+              </div>
+            </div>
+  
+            <button onclick="document.getElementById('id303').style.display='block'" class="sala-aula">Laboratório 3</button>
+            <div id="id303" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id303').style.display='none'" 
+                  class="button display-topright">&times;</span>
+                  <h2>Modal Header</h2>
+                </header>
+                <div class="container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                </div>
+                <footer class="container teal">
+                  <p>Modal Footer</p>
+                </footer>
+              </div>
+            </div>         
+  
+          <button onclick="document.getElementById('id304').style.display='block'" class="sala-aula">Laboratório 4</button>
+            <div id="id304" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id304').style.display='none'" 
+                  class="button display-topright">&times;</span>
+                  <h2>Modal Header</h2>
+                </header>
+                <div class="container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                </div>
+                <footer class="container teal">
+                  <p>Modal Footer</p>
+                </footer>
+              </div>
+            </div>
+            
+            <button onclick="document.getElementById('id305').style.display='block'" class="sala-aula">Laboratório de Jogos</button>
+            <div id="id305" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id305').style.display='none'" 
+                  class="button display-topright">&times;</span>
+                  <h2>Modal Header</h2>
+                </header>
+                <div class="container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                </div>
+                <footer class="container teal">
+                  <p>Modal Footer</p>
+                </footer>
+              </div>
+            </div>
+  
+          <button onclick="document.getElementById('id306').style.display='block'" class="sala-aula">Laboratório de Telecom</button>
+            <div id="id306" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id306').style.display='none'" 
+                  class="button display-topright">&times;</span>
+                  <h2>Modal Header</h2>
+                </header>
+                <div class="container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                </div>
+                <footer class="container teal">
+                  <p>Modal Footer</p>
+                </footer>
+              </div>
+            </div>
+  
+          <button onclick="document.getElementById('id301').style.display='block'" class="sala-aula">Laboratório de Projetos</button>
+            <div id="id301" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id301').style.display='none'" 
+                  class="button display-topright">&times;</span>
+                  <h2>Modal Header</h2>
+                </header>
+                <div class="container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                </div>
+                <footer class="container teal">
+                  <p>Modal Footer</p>
+                </footer>
+              </div>
+          </div>
+        </div>
+      </article>
+
     </body>
-    
-    <div id="salas"></div>
-    <div id="labs"></div>
 </html>
