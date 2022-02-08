@@ -13,8 +13,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  font-size: larger;
-  text-decoration-line: underline;
+  font-size: 1.125rem;
 }
 
 .nav-list li:not(:last-child){
