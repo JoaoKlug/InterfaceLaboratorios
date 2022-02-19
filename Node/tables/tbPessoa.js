@@ -10,7 +10,7 @@ const cliente = new Client({
 
 //consultarPessoaTabela()
 //consultarPessoa('pedro')
-//inserirPessoa('augusto', '12212212', '20193018812', 'limpeza', 'a')
+//inserirPessoa('augusto', '12212212', '20193018812', 'limpeza', 'a', 2019)
 //alterarPessoa('nome_pessoa', 'joao', 'jg')
 //deletarPessoa('jg')
 
@@ -53,14 +53,13 @@ async function consultarPessoa(nome_pessoa){
 }
 
 //INSERT
-async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ativo) {
+async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ano_entrada,ativo) {
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
         console.log("Conexão bem sucedida")
 
-        await cliente.query("INSERT INTO public.tbpessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, id_cargo_pessoa, ativo) VALUES ('" + nome_pessoa + "', '" + cracha_pessoa + "', '" + matricula_pessoa + "', (select id from tbCargo where nome_cargo = '" + nome_cargo + "'), '" + ativo + "');")
-        console.log("Valor inserido na tabela")
+        await cliente.query("INSERT INTO public.tbpessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, id_cargo_pessoa, ativo, ano_entrada) VALUES ('" + nome_pessoa + "', '" + cracha_pessoa + "', '" + matricula_pessoa + "', (select id from tbCargo where nome_cargo = '" + nome_cargo + "'), '" + ativo + "', " + ano_entrada + ");")
 
         const resultado = await cliente.query("select * from tbPessoa")
         console.table(resultado.rows)
