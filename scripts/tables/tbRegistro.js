@@ -8,7 +8,7 @@ const cliente = new Client({
     database: "db_tcc"
 })
 
-//consultarRegistroTabela()
+consultarRegistroTabela()
 //consultarRegistro('2022-02-20')
 //inserirRegistro('2022-02-06 12:36:34', 'LABINFO2', 'augusto')
 //alterarRegistro('data_hora', '2022-02-19', '2022-02-20')
