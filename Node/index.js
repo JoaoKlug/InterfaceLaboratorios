@@ -1,7 +1,10 @@
-const express = require('express')
-const app = express()
-const port = 3000
+//Configurações do BD
 
-app.listen(port, () => {
-    console.log(`http://localhost:${port}`)
+const Client = require('pg').Client;
+const cliente = new Client({
+    user: "postgres",
+    password: "root",
+    host: "localhost",
+    port: 5432,
+    database: "db_tcc"
 })
