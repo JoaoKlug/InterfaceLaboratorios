@@ -8,9 +8,9 @@ const cliente = new Client({
     database: "db_tcc"
 })
 
-consultarDirecaoEnsinoTabela()
+//consultarDirecaoEnsinoTabela()
 //consultarDirecaoEnsino('email@teste.com')
-//inserirDirecaoEnsino('email3@teste.com', 'senhaForte2', 'joao')
+inserirDirecaoEnsino('email3@teste.com', 'senhaForte2', 'joao')
 //alterarDirecaoEnsino('email_DirecaoEnsino', 'email2@teste.com', 'emailMaster@teste.com')
 //deletarDirecaoEnsino('emailMaster@teste.com')
 
