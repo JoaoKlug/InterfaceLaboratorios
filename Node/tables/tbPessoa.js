@@ -10,7 +10,7 @@ const cliente = new Client({
 
 //consultarPessoaTabela()
 //consultarPessoa('pedro')
-//inserirPessoa('augusto', '12212212', '20193018812', 'limpeza', 'a', 2019)
+inserirPessoa('augusto', '12212212', '20193018812', 'limpeza', '2019','a' )
 //alterarPessoa('nome_pessoa', 'joao', 'jg')
 //deletarPessoa('jg')
 
