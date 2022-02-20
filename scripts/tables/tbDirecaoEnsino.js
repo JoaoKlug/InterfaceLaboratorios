@@ -16,6 +16,10 @@ const cliente = new Client({
 
 //SELECT
 async function consultarDirecaoEnsinoTabela(){
+    /**
+     * Retona todas as linhas da tabela tbDirecaoEnsino
+     * Parâmetros: nenhum
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -35,6 +39,10 @@ async function consultarDirecaoEnsinoTabela(){
 
 //SELECT ESPECÍFICO
 async function consultarDirecaoEnsino(email_DirecaoEnsino){
+    /**
+     * Retorna a linha especificada pelo email da direção de ensino da tabela tbDirecaoEnsino
+     * Parâmetros: email_DirecaoEnsino(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -54,6 +62,11 @@ async function consultarDirecaoEnsino(email_DirecaoEnsino){
 
 //INSERT
 async function inserirDirecaoEnsino(email_DirecaoEnsino, senha_DirecaoEnsino, nome_pessoa) {
+    /**
+     * Adiciona uma nova linha na tabela tbDirecaoEnsino
+     * Parâmetros: email_DirecaoEnsino(string), senha_DirecaoEnsino(string) e nome_pessoa(string)
+     * OBS: nome_pessoa é referente à uma pessoa já adicionada na tbPessoa
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -76,6 +89,10 @@ async function inserirDirecaoEnsino(email_DirecaoEnsino, senha_DirecaoEnsino, no
 
 //UPDATE
 async function alterarDirecaoEnsino(atributo, valorAntigo, valorNovo) {
+    /**
+     * Altera o atributo especificado da tabela tbDirecaoEnsino, tomando como referência o valor antigo do atributo e substituindo-o pelo novo valor
+     * Parâmetros: atributo(string), valorAntigo(string) e valorNovo(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -98,6 +115,10 @@ async function alterarDirecaoEnsino(atributo, valorAntigo, valorNovo) {
 
 //DELETE
 async function deletarDirecaoEnsino(email_DirecaoEnsino) {
+    /**
+     * Deleta uma linha da tabela tbDirecaoEnsino tomando como referência o email da direção de ensino
+     * Parâmetros: email_DirecaoEnsino(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()

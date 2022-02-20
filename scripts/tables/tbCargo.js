@@ -17,6 +17,10 @@ const cliente = new Client({
 
 //SELECT
 async function consultarCargoTabela(){
+    /**
+     * Retona todas as linhas da tabela tbCargo
+     * Parâmetros: nenhum
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -36,6 +40,10 @@ async function consultarCargoTabela(){
 
 //SELECT ESPECÍFICO
 async function consultarCargo(nome_cargo){
+    /**
+     * Retorna a linha especificada pelo nome do cargo da tabela tbCargo
+     * Parâmetros: nome_cargo(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -55,6 +63,10 @@ async function consultarCargo(nome_cargo){
 
 //INSERT
 async function inserirCargo(nome_cargo) {
+    /**
+     * Adiciona uma nova linha na tabela tbCargo
+     * Parâmetros: nome_cargo(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -77,6 +89,10 @@ async function inserirCargo(nome_cargo) {
 
 //UPDATE
 async function alterarCargo(atributo, valorAntigo, valorNovo) {
+    /**
+     * Altera o atributo especificado da tabela tbCargo, tomando como referência o valor antigo do atributo e substituindo-o pelo novo valor
+     * Parâmetros: atributo(string), valorAntigo(string) e valorNovo(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -99,6 +115,10 @@ async function alterarCargo(atributo, valorAntigo, valorNovo) {
 
 //DELETE
 async function deletarCargo(nome_cargo) {
+    /**
+     * Deleta uma linha da tabela tbCargo tomando como referência o nome do cargo
+     * Parâmetros: nome_cargo(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()

@@ -16,6 +16,10 @@ const cliente = new Client({
 
 //SELECT
 async function consultarFechaduraTabela(){
+    /**
+     * Retona todas as linhas da tabela tbFechadura
+     * Parâmetros: nenhum
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -35,6 +39,10 @@ async function consultarFechaduraTabela(){
 
 //SELECT ESPECÍFICO
 async function consultarFechadura(nome_fechadura){
+    /**
+     * Retorna a linha especificada pelo nome da fechadura da tabela tbFechadura
+     * Parâmetros: nome_fechadura(string)
+     */    
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -54,6 +62,10 @@ async function consultarFechadura(nome_fechadura){
 
 //INSERT
 async function inserirFechadura(nome_fechadura) {
+    /**
+     * Adiciona uma nova linha na tabela tbFechadura
+     * Parâmetros: nome_fechadura(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -76,6 +88,10 @@ async function inserirFechadura(nome_fechadura) {
 
 //UPDATE
 async function alterarFechadura(atributo, valorAntigo, valorNovo) {
+    /**
+     * Altera o atributo especificado da tabela tbFechadura, tomando como referência o valor antigo do atributo e substituindo-o pelo novo valor
+     * Parâmetros: atributo(string), valorAntigo(string) e valorNovo(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -98,6 +114,10 @@ async function alterarFechadura(atributo, valorAntigo, valorNovo) {
 
 //DELETE
 async function deletarFechadura(nome_fechadura) {
+    /**
+     * Deleta uma linha da tabela tbFechadura tomando como referência o nome da fechadura
+     * Parâmetros: nome_fechadura(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
