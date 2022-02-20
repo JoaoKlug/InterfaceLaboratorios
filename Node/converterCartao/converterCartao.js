@@ -1,4 +1,3 @@
-
 function ConverterCartao(decimalCardCode)
 {
     let binaryCardCode = DecimalToBinary(decimalCardCode);
@@ -12,7 +11,7 @@ function ConverterCartao(decimalCardCode)
 
     let cardNumberBinary = new Array(16);
     let indexCardNumberBinary = 0;
-    for(let i = 23; i<binaryCardCode.length ; i++){
+    for(let i = 23; i < binaryCardCode.length ; i++){
         cardNumberBinary[indexCardNumberBinary] = binaryCardCode[i];
         indexCardNumberBinary++;
     }
@@ -20,7 +19,7 @@ function ConverterCartao(decimalCardCode)
     let facilityCode = BinaryToDecimal(facilityCodeBinary);
     let cardNumber = BinaryToDecimal(cardNumberBinary);
     
-    var cracha = facilityCode*100000 + cardNumber;
+    let cracha = facilityCode*100000 + cardNumber;
     return cracha;
 }
 
@@ -30,8 +29,8 @@ function DecimalToBinary(decimal)
     let bit; 
     let i = binary.length-1;
     while (decimal != 0) {
-        bit = decimal % 2;
-        decimal = parseInt(decimal / 2);
+        bit = decimal%2;
+        decimal = parseInt(decimal/2);
         binary[i] = bit;
         i--;
     }
@@ -41,9 +40,9 @@ function DecimalToBinary(decimal)
 function BinaryToDecimal(binary)
 {
     let decimal = 0;
-    let exponent =1;
+    let exponent = 1;
     i = binary.length-1;
-    while(i>=0){
+    while(i >= 0){
         decimal = decimal+ binary[i]*exponent;
         exponent = exponent*2;
         i--;
@@ -53,6 +52,6 @@ function BinaryToDecimal(binary)
 
 //Simulando o "chamamento" da função (Somente para fins demonstrativos)
 
-var decimalCardNumber = 4306444091;
-var cracha = ConverterCartao(decimalCardNumber);
+var decimalCardCode = 4306444091;
+var cracha = ConverterCartao(decimalCardCode);
 console.log(`cracha: ${cracha}`);
