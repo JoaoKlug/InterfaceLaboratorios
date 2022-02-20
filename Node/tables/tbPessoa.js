@@ -16,6 +16,10 @@ inserirPessoa('augusto', '12212212', '20193018812', 'limpeza', '2019','a' )
 
 //SELECT
 async function consultarPessoaTabela(){
+     /**
+     * Retona todas as linhas da tabela tbPessoa
+     * Parâmetros: nenhum
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -35,6 +39,10 @@ async function consultarPessoaTabela(){
 
 //SELECT ESPECÍFICO
 async function consultarPessoa(nome_pessoa){
+    /**
+     * Retorna a linha especificada pelo nome da pessoa da tabela tbPessoa
+     * Parâmetros: nome_pessoa(string)
+     */    
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -53,7 +61,19 @@ async function consultarPessoa(nome_pessoa){
 }
 
 //INSERT
+<<<<<<< HEAD:scripts/tables/tbPessoa.js
+async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ativo, ano_entrada) {
+    /**
+     * Adiciona uma nova linha na tabela tbPessoa
+     * Parâmetros: nome_pessoa(string), cracha_pessoa(string), matricula_pessoa(string), nome_cargo(string), ativo(char) e ano_entrada(integer)
+     * OBS: 
+     * - cracha_pessoa é referente ao código A do cartão. Para a consulta no banco, ele deve ser convertido    para weigand (W)
+     * - matricula_pessoa deve ter o formato '20193019910'
+     * - nome_cargo é refente à um cargo já existente na tabela tbCargo 
+     */
+=======
 async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ano_entrada,ativo) {
+>>>>>>> fbbf380edd444007c52aed8805795f63e91cb8f9:Node/tables/tbPessoa.js
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -75,6 +95,10 @@ async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_
 
 //UPDATE
 async function alterarPessoa(atributo, valorAntigo, valorNovo) {
+    /**
+     * Altera o atributo especificado da tabela tbPessoa, tomando como referência o valor antigo do atributo e substituindo-o pelo novo valor
+     * Parâmetros: atributo(string), valorAntigo(string) e valorNovo(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -97,6 +121,10 @@ async function alterarPessoa(atributo, valorAntigo, valorNovo) {
 
 //DELETE
 async function deletarPessoa(nome_pessoa) {
+    /**
+     * Deleta uma linha da tabela tbPessoa tomando como referência o nome da pessoa
+     * Parâmetros: nome_pessoa(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()

@@ -16,6 +16,10 @@ consultarRegistroTabela()
 
 //SELECT
 async function consultarRegistroTabela(){
+    /**
+     * Retona todas as linhas da tabela tbRegistro
+     * Parâmetros: nenhum
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -35,6 +39,10 @@ async function consultarRegistroTabela(){
 
 //SELECT ESPECÍFICO
 async function consultarRegistro(data_hora){
+    /**
+     * Retorna a linha especificada pela data e hora da tabela tbRegistro
+     * Parâmetros: data_hora(timestamp('YYYY-MM-DD HH:MM:SS'))
+     */    
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -54,6 +62,13 @@ async function consultarRegistro(data_hora){
 
 //INSERT
 async function inserirRegistro(data_hora, nome_fechadura, nome_pessoa) {
+    /**
+     * Adiciona uma nova linha na tabela tbRegistro
+     * Parâmetros: data_hora(timestamp('YYYY-MM-DD HH:MM:SS')), nome_fechadura(string) e nome_pessoa(string)
+     * OBS:
+     * - nome_fechadura é referente à uma fechadura já existente na tabela tbFechadura
+     * - nome_pessoa é referente à uma pessoa já existente na tabela tbPessoa
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -76,6 +91,10 @@ async function inserirRegistro(data_hora, nome_fechadura, nome_pessoa) {
 
 //UPDATE
 async function alterarRegistro(atributo, valorAntigo, valorNovo) {
+    /**
+     * Altera o atributo especificado da tabela tbRegistro, tomando como referência o valor antigo do atributo e substituindo-o pelo novo valor
+     * Parâmetros: atributo(string), valorAntigo(string) e valorNovo(string)
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -98,6 +117,10 @@ async function alterarRegistro(atributo, valorAntigo, valorNovo) {
 
 //DELETE
 async function deletarRegistro(data_hora) {
+    /**
+     * Deleta uma linha da tabela tbRegistro tomando como referência a data e hora
+     * Parâmetros: data_hora(timestamp('YYYY-MM-DD HH:MM:SS'))
+     */
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
