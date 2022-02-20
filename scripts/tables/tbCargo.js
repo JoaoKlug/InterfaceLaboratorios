@@ -10,7 +10,7 @@ const cliente = new Client({
 
 //consultarCargoTabela()
 //consultarCargo('professor')
-inserirCargo('limpeza')
+//inserirCargo('limpeza')
 //alterarCargo('nome_cargo', 'professor', 'aluno')
 //deletarCargo('professor')
 
