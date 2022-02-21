@@ -1,6 +1,6 @@
-function ConverterCartao(decimalCardCode)
+function ConverterCartao(hexCardCode)
 {
-    let binaryCardCode = DecimalToBinary(decimalCardCode);
+    let binaryCardCode = DecimalToBinary(parseInt(hexCardCode, 16));
 
     let facilityCodeBinary = new Array(8);
     let indexfacilityCodeBinary = 0;
@@ -49,9 +49,8 @@ function BinaryToDecimal(binary)
     }
     return decimal;
 }
-
 //Simulando o "chamamento" da função (Somente para fins demonstrativos)
 
-var decimalCardCode = 4306444091;
+var decimalCardCode = "590046E4BF";
 var cracha = ConverterCartao(decimalCardCode);
 console.log(`cracha: ${cracha}`);
