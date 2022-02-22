@@ -10,7 +10,7 @@ const cliente = new Client({
 
 //consultarPessoaTabela()
 //consultarPessoa('pedro')
-inserirPessoa('augusto', '12212212', '20193018812', 'limpeza', '2019','a' )
+inserirPessoa('augusto', '7058559', '20193018812', 'professor', 'S','2019' )
 //alterarPessoa('nome_pessoa', 'joao', 'jg')
 //deletarPessoa('jg')
 
@@ -61,7 +61,6 @@ async function consultarPessoa(nome_pessoa){
 }
 
 //INSERT
-<<<<<<< HEAD:scripts/tables/tbPessoa.js
 async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ativo, ano_entrada) {
     /**
      * Adiciona uma nova linha na tabela tbPessoa
@@ -71,9 +70,7 @@ async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_
      * - matricula_pessoa deve ter o formato '20193019910'
      * - nome_cargo é refente à um cargo já existente na tabela tbCargo 
      */
-=======
-async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ano_entrada,ativo) {
->>>>>>> fbbf380edd444007c52aed8805795f63e91cb8f9:Node/tables/tbPessoa.js
+
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
