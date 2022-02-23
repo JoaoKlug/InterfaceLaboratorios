@@ -1,3 +1,6 @@
+var ConverterCartao =  require('../converterCartao/converterCartao');
+
+
 //CONFIGURA O BD
 const Client = require('pg').Client;
 const cliente = new Client({
@@ -8,7 +11,6 @@ const cliente = new Client({
     database: "db_tcc"
 })
 
-import(ConverterCartao);
 async function LiberarFechadura(hexCardCode)
 {
     var nome_pessoa = "";
@@ -16,6 +18,7 @@ async function LiberarFechadura(hexCardCode)
     var acesso = false;
 
     cracha_pessoa = ConverterCartao(hexCardCode);
+    console.log(cracha_pessoa);
 
     try{
         console.log("Iniciando a conexão")
@@ -23,14 +26,23 @@ async function LiberarFechadura(hexCardCode)
         console.log("Conexão bem sucedida")
 
         const resultado = await cliente.query("select id_cargo_pessoa from tbPessoa where cracha_pessoa = '" + cracha_pessoa + "';")
-        console.table(resultado.rows)
+        var cargo_id = toString(resultado.rows[0]);                                                                                                                                                                                                                                                      ;
+        console.log(cargo_id);                                              
+        
+        if(cargo_id == 2){
+            acesso = true;
+            nome_pessoa = await cliente.query("select nome_pessoa from tbPessoa where cracha_pessoa = '" + cracha_pessoa + "';")
+            console.log(nome_pessoa);
+        }
+        return acesso;
     }
     catch{
-        console.log("Ocorreu um erro no consultaFechadura. Erro: " + ex)
+        console.log("Ocorreu um erro")
     }
     finally{
         await cliente.end()
         console.log("Cliente desconectado")
     }
-
 }
+var acesso = LiberarFechadura("590046E4BF");
+console.log(acesso);

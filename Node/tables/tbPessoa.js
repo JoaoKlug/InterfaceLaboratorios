@@ -10,7 +10,7 @@ const cliente = new Client({
 
 //consultarPessoaTabela()
 //consultarPessoa('pedro')
-inserirPessoa('augusto', '12212212', '20193018812', 'limpeza', '2019','a' )
+inserirPessoa('brasil', '7058559', '20193019910', 'professor', 'S','2019')
 //alterarPessoa('nome_pessoa', 'joao', 'jg')
 //deletarPessoa('jg')
 
@@ -61,7 +61,6 @@ async function consultarPessoa(nome_pessoa){
 }
 
 //INSERT
-<<<<<<< HEAD:scripts/tables/tbPessoa.js
 async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ativo, ano_entrada) {
     /**
      * Adiciona uma nova linha na tabela tbPessoa
@@ -71,21 +70,18 @@ async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_
      * - matricula_pessoa deve ter o formato '20193019910'
      * - nome_cargo é refente à um cargo já existente na tabela tbCargo 
      */
-=======
-async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ano_entrada,ativo) {
->>>>>>> fbbf380edd444007c52aed8805795f63e91cb8f9:Node/tables/tbPessoa.js
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
         console.log("Conexão bem sucedida")
 
-        await cliente.query("INSERT INTO public.tbpessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, id_cargo_pessoa, ativo, ano_entrada) VALUES ('" + nome_pessoa + "', '" + cracha_pessoa + "', '" + matricula_pessoa + "', (select id from tbCargo where nome_cargo = '" + nome_cargo + "'), '" + ativo + "', " + ano_entrada + ");")
+        await cliente.query("INSERT INTO public.tbpessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, id_cargo_pessoa, ativo, ano_entrada) VALUES ('" + nome_pessoa + "', '" + cracha_pessoa + "', '" + matricula_pessoa + "', (select id from tbCargo where nome_cargo = '" + nome_cargo + "'), '" + ativo + "' , '" + ano_entrada + "');")
 
-        const resultado = await cliente.query("select * from tbPessoa")
+        const resultado = await cliente.query("select * from tbpessoa")
         console.table(resultado.rows)
     }
     catch{
-        console.log("Ocorreu um erro no inserirPessoa. Erro:" + ex)
+        console.log("Ocorreu um erro no inserirPessoa")
     }
     finally{
         await cliente.end()
