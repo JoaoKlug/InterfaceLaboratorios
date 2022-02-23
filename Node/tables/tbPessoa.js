@@ -10,7 +10,7 @@ const cliente = new Client({
 
 //consultarPessoaTabela()
 //consultarPessoa('pedro')
-inserirPessoa('brasil', '7058559', '20193019910', 'professor', 'S','2019')
+inserirPessoa('augusto', '7058559', '20193018812', 'professor', 'S','2019' );
 //alterarPessoa('nome_pessoa', 'joao', 'jg')
 //deletarPessoa('jg')
 

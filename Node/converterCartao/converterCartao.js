@@ -48,3 +48,8 @@ function BinaryToDecimal(binary)
     }
     return decimal;
 }
+//Simulando o "chamamento" da função (Somente para fins demonstrativos)
+
+//var decimalCardCode = "590046E4BF";
+//var cracha = ConverterCartao(decimalCardCode);
+//console.log(`cracha: ${cracha}`);
