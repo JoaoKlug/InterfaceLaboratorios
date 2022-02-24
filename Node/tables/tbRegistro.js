@@ -1,13 +1,4 @@
-{
-const Client = require('pg').Client;
-const cliente = new Client({
-    user: "postgres",
-    password: "root",
-    host: "localhost",
-    port: 5432,
-    database: "db_tcc"
-})
-
+//consultarRegistroTabela()
 //consultarRegistro('2022-02-20')
 //inserirRegistro('2022-02-06 12:36:34', 'LABINFO2', 'augusto')
 //alterarRegistro('data_hora', '2022-02-19', '2022-02-20')
@@ -37,7 +28,7 @@ async function consultarRegistroTabela(){
 }
 
 //SELECT ESPECÍFICO
-module.exports = async function consultarRegistro(data_hora){
+async function consultarRegistro(data_hora){
     /**
      * Retorna a linha especificada pela data e hora da tabela tbRegistro
      * Parâmetros: data_hora(timestamp('YYYY-MM-DD HH:MM:SS'))
@@ -61,13 +52,14 @@ module.exports = async function consultarRegistro(data_hora){
 
 //INSERT
  module.exports = async function inserirRegistro(data_hora, nome_fechadura, nome_pessoa) {
-    /**
-     * Adiciona uma nova linha na tabela tbRegistro
-     * Parâmetros: data_hora(timestamp('YYYY-MM-DD HH:MM:SS')), nome_fechadura(string) e nome_pessoa(string)
-     * OBS:
-     * - nome_fechadura é referente à uma fechadura já existente na tabela tbFechadura
-     * - nome_pessoa é referente à uma pessoa já existente na tabela tbPessoa
-     */
+     const Client = require('pg').Client;
+     const cliente = new Client({
+         user: "postgres",
+         password: "root",
+         host: "localhost",
+         port: 5432,
+         database: "db_tcc"
+     })
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
@@ -138,5 +130,4 @@ async function deletarRegistro(data_hora) {
         await cliente.end()
         console.log("Cliente desconectado")
     }
-}
 }

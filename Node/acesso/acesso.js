@@ -1,3 +1,12 @@
+const Client = require('pg').Client;
+    const cliente = new Client({
+    user: "postgres",
+    password: "root",
+    host: "localhost",
+    port: 5432,
+    database: "db_tcc"
+    })
+
 var LiberarFechadura = require('./liberarFechadura');
 
 class Acesso{
@@ -45,21 +54,24 @@ function Armazenar(acesso_dado, nome_pessoa, cracha_pessoa)
     acesso.SetCrachaPessoa =  cracha_pessoa;
 }
 
+
 const acessoPromise = LiberarFechadura(cracha_entrada);
     acessoPromise.then( function(acessoPromise){
         Armazenar(acessoPromise.acesso, acessoPromise.nome_pessoa, acessoPromise.cracha_pessoa);
-        console.log(acesso.GetAcesso + " " + acesso.GetNomePessoa + " " + acesso.GetCrachaPessoa);
+            
+            if(acesso.GetAcesso == true)
+            {
+                var InserirRegistro = require('../tables/tbRegistro.js');
+                var alterarFechadura =  require('../tables/tbFechadura.js'); 
+                var data_hora = Relogio();
+                var nome_fechadura_up = nome_fechadura.toUpperCase();
+                var atributo = 'estado_fechadura';
+                InserirRegistro(data_hora, nome_fechadura_up, acesso.GetNomePessoa);
+                alterarFechadura(atributo , nome_fechadura_up, 'false');
 
-        if(acesso.GetAcesso == true)
-        {
-            var data_hora = Relogio();
-            var InserirRegistro = require('../tables/tbRegistro');
-            InserirRegistro(data_hora, nome_fechadura, acesso.GetNomePessoa);
-
-            var alterarFechadura =  require('../tables/tbFechadura');
-            alterarFechadura('estado_fechadura', nome_fechadura, false)
-        }
-    });
+            }
+    }
+    );
     function Relogio()
     {
       const momentoAtual = new Date();

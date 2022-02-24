@@ -10,7 +10,7 @@ const cliente = new Client({
 
 //consultarPessoaTabela()
 //consultarPessoa('pedro')
-//inserirPessoa('augusto', '7058559', '20193018812', 'professor', 'S','2019' );
+inserirPessoa('pedro', '7058559', '20193018817', 'professor', 'S','2019');
 //alterarPessoa('nome_pessoa', 'joao', 'jg')
 //deletarPessoa('jg')
 
@@ -61,7 +61,7 @@ async function consultarPessoa(nome_pessoa){
 }
 
 //INSERT
-module.exports = async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ativo, ano_entrada) {
+async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ativo, ano_entrada) {
     /**
      * Adiciona uma nova linha na tabela tbPessoa
      * Parâmetros: nome_pessoa(string), cracha_pessoa(string), matricula_pessoa(string), nome_cargo(string), ativo(char) e ano_entrada(integer)

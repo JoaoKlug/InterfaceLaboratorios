@@ -1,16 +1,6 @@
-//CONFIGURA O BD
-const Client = require('pg').Client;
-const cliente = new Client({
-    user: "postgres",
-    password: "root",
-    host: "localhost",
-    port: 5432,
-    database: "db_tcc"
-})
-
 //consultarFechaduraTabela()
 //consultarFechadura('LABINFO1')
-inserirFechadura('LAB1')
+//inserirFechadura('LAB1')
 //alterarFechadura('nome_fechadura', 'LABINFO1', 'LABINFO2')
 //deletarFechadura('LABINFO2')
 
@@ -88,16 +78,22 @@ async function inserirFechadura(nome_fechadura) {
 
 //UPDATE
 module.exports = async function alterarFechadura(atributo, nome_fechadura, valorNovo) {
-    /**
-     * Altera o atributo especificado da tabela tbFechadura, tomando como referência o valor antigo do atributo e substituindo-o pelo novo valor
-     * Parâmetros: atributo(string), valorAntigo(string) e valorNovo(string)
-     */
+     const Client = require('pg').Client;
+     const cliente = new Client({
+         user: "postgres",
+         password: "root",
+         host: "localhost",
+         port: 5432,
+         database: "db_tcc"
+     })
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
         console.log("Conexão bem sucedida")
 
-        await cliente.query("update tbFechadura set "+ atributo + " = '" + valorNovo + "' where nome_fechadura = '" + nome_fechadura +"') ;")
+        console.log(atributo + " " + valorNovo + "")
+        await cliente.query("update tbFechadura set "+ atributo + " = '" + valorNovo + "' where nome_fechadura = '" + nome_fechadura +"';")
+        
         console.log("Valor alterado na tabela")
 
         const resultado = await cliente.query("select * from tbFechadura")

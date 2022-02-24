@@ -24,15 +24,19 @@ module.exports = async function LiberarFechadura(hexCardCode)
 
         var resultado = await cliente.query("select ativo from tbPessoa where cracha_pessoa = '" + cracha_pessoa + "';")
             ativo = resultado.rows[0].ativo;
+        console.log(ativo)
 
         resultado = await cliente.query("select id_cargo_pessoa from tbPessoa where cracha_pessoa = '" + cracha_pessoa + "';")
             var id_cargo_pessoa = resultado.rows[0].id_cargo_pessoa;
                 resultado = await cliente.query("select nome_cargo from tbCargo where id = '" + id_cargo_pessoa + "';")
                     var nome_cargo = resultado.rows[0].nome_cargo;
-        
+        console.log(nome_cargo)
+
+
         resultado = await cliente.query("select nome_pessoa from tbPessoa where cracha_pessoa = '" + cracha_pessoa + "';")
             nome_pessoa = resultado.rows[0].nome_pessoa;
-        
+        console.log(nome_pessoa)
+
         if(ativo == "S")
         {
             if (nome_cargo == "professor" || nome_cargo == "servidor")
