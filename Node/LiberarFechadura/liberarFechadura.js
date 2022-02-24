@@ -9,7 +9,7 @@ const cliente = new Client({
     database: "db_tcc"
 })
 
-async function LiberarFechadura(hexCardCode)
+module.exports = async function LiberarFechadura(hexCardCode)
 {
     var nome_pessoa = "";
     var cracha_pessoa = 0;
