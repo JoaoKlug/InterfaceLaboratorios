@@ -1,4 +1,3 @@
-var converterCartao =  require('./converterCartao');
 //CONFIGURA O BD
 const Client = require('pg').Client;
 const cliente = new Client({
@@ -8,9 +7,9 @@ const cliente = new Client({
     port: 5432,
     database: "db_tcc"
 })
-
 module.exports = async function LiberarFechadura(hexCardCode)
 {
+    var converterCartao =  require('./converterCartao');
     var nome_pessoa = "";
     var cracha_pessoa = 0;
     var acesso = false;
@@ -48,10 +47,11 @@ module.exports = async function LiberarFechadura(hexCardCode)
     }
     return {acesso, nome_pessoa};
 }
+//Testar sem module.exports ( qnd for usar tem que seguir o padrão)
+    //var acessoPromisse = LiberarFechadura("590046E4BF");
+    //acessoPromisse.then( function(acessoPromisse){
+    //    var acesso = acessoPromisse.acesso;
+    //    var nome_pessoa = acessoPromisse.nome_pessoa;
+    //   console.log(acesso + " " + nome_pessoa);
+    //});
 
-var acessoPromisse = LiberarFechadura("590046E4BF");
-acessoPromisse.then( function(acessoPromisse){
-    var acesso = acessoPromisse.acesso;
-    var nome_pessoa = acessoPromisse.nome_pessoa;
-    console.log(acesso + " " + nome_pessoa);
-});
