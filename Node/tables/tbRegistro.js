@@ -1,4 +1,4 @@
-//CONFIGURA O BD
+{
 const Client = require('pg').Client;
 const cliente = new Client({
     user: "postgres",
@@ -37,7 +37,7 @@ async function consultarRegistroTabela(){
 }
 
 //SELECT ESPECÍFICO
-async function consultarRegistro(data_hora){
+module.exports = async function consultarRegistro(data_hora){
     /**
      * Retorna a linha especificada pela data e hora da tabela tbRegistro
      * Parâmetros: data_hora(timestamp('YYYY-MM-DD HH:MM:SS'))
@@ -60,7 +60,7 @@ async function consultarRegistro(data_hora){
 }
 
 //INSERT
-async function inserirRegistro(data_hora, nome_fechadura, nome_pessoa) {
+ module.exports = async function inserirRegistro(data_hora, nome_fechadura, nome_pessoa) {
     /**
      * Adiciona uma nova linha na tabela tbRegistro
      * Parâmetros: data_hora(timestamp('YYYY-MM-DD HH:MM:SS')), nome_fechadura(string) e nome_pessoa(string)
@@ -138,4 +138,5 @@ async function deletarRegistro(data_hora) {
         await cliente.end()
         console.log("Cliente desconectado")
     }
+}
 }

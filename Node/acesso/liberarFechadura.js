@@ -33,7 +33,7 @@ module.exports = async function LiberarFechadura(hexCardCode)
         resultado = await cliente.query("select nome_pessoa from tbPessoa where cracha_pessoa = '" + cracha_pessoa + "';")
             nome_pessoa = resultado.rows[0].nome_pessoa;
         
-        if(ativo != "S")
+        if(ativo == "S")
         {
             if (nome_cargo == "professor" || nome_cargo == "servidor")
                 {

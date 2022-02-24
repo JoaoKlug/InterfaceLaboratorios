@@ -34,8 +34,9 @@ class Acesso{
 }
 var acesso =  new Acesso();
 
-//Cartão lido pela fechadura
+//Informações recebidas pelo Arduino
 var cracha_entrada = "590046E4BF";
+var nome_fechadura = "lab1";
 
 function Armazenar(acesso_dado, nome_pessoa, cracha_pessoa)
 {
@@ -48,5 +49,32 @@ const acessoPromise = LiberarFechadura(cracha_entrada);
     acessoPromise.then( function(acessoPromise){
         Armazenar(acessoPromise.acesso, acessoPromise.nome_pessoa, acessoPromise.cracha_pessoa);
         console.log(acesso.GetAcesso + " " + acesso.GetNomePessoa + " " + acesso.GetCrachaPessoa);
+
+        if(acesso.GetAcesso == true)
+        {
+            var data_hora = Relogio();
+            var InserirRegistro = require('../tables/tbRegistro');
+            InserirRegistro(data_hora, nome_fechadura, acesso.GetNomePessoa);
+
+            var alterarFechadura =  require('../tables/tbFechadura');
+            alterarFechadura('estado_fechadura', nome_fechadura, false)
+        }
     });
-    
+    function Relogio()
+    {
+      const momentoAtual = new Date();
+     
+      const dia = verificarDataHora(momentoAtual.getDate());
+      const mes = verificarDataHora(momentoAtual.getMonth()+1);
+      const ano = momentoAtual.getFullYear();
+      const hora = verificarDataHora(momentoAtual.getHours());
+      const minuto = verificarDataHora(momentoAtual.getMinutes());
+      const segundos = verificarDataHora(momentoAtual.getSeconds());
+      
+      function verificarDataHora(tempo)
+      {
+        return tempo <10 ? `0${tempo}` : tempo;
+      }
+      const dataHora = dia+"-"+mes+"-"+ano+" "+hora+":"+minuto+":"+segundos;
+      return dataHora;
+    }

@@ -61,7 +61,7 @@ async function consultarPessoa(nome_pessoa){
 }
 
 //INSERT
-async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ativo, ano_entrada) {
+module.exports = async function inserirPessoa(nome_pessoa, cracha_pessoa, matricula_pessoa, nome_cargo, ativo, ano_entrada) {
     /**
      * Adiciona uma nova linha na tabela tbPessoa
      * Parâmetros: nome_pessoa(string), cracha_pessoa(string), matricula_pessoa(string), nome_cargo(string), ativo(char) e ano_entrada(integer)
