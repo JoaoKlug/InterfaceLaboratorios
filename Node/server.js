@@ -1,10 +1,19 @@
 const net = require('net')
+var res = 0
+var cracha = 0
+var nome_lab = 0
 
 const handleConnection = socket => {
   console.log('alguém se conectou')
   socket.on('data', data => {
-    console.log(data.toString())
+    res = data.toString()
+    res = res.split('/')
+    cracha = res[0]
+    nome_lab = res[1]
+    console.log(cracha)
+    console.log(nome_lab)
   })
+
 }
 
 const server = net.createServer(handleConnection)
