@@ -17,11 +17,65 @@
     font-size: 25px;
     text-align: center;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 7;
     margin: 5px;
   }
+
+  #terceiroandar{
+      grid-column: 1 / span 3;
+      grid-row: 1;
+  }
+  #terreo{
+    grid-column: 5 / span 7;
+    grid-row: 1;
+  }
+  #labtecnico{
+    grid-column: 1/ span 3;
+    grid-row: 4;
+  }
+  #predionovo{
+    grid-column: 5 / span 7;
+    grid-row: 4;
+  }
+  #lab2{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #lab3{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #lab4{
+    grid-column: 3;
+    grid-row: 2;
+  }
+  #labjogos{
+    grid-column: 1;
+    grid-row: 3;
+  }
+  #labtelecom{
+    grid-column: 2;
+    grid-row: 3;
+  }
+  #labprojeto{
+    grid-column: 3;
+    grid-row: 3;
+  }
+  #lab1{
+    grid-column: 5 /span 7;
+    grid-row: 2;
+  }
+  #labeletronica{
+    grid-column: 1 / span 3;
+    grid-row: 5;
+  }
+  #labedificacao{
+    grid-column: 5 / span 7;
+    grid-row: 5;
+  }
+
+
   .sala-aula {
-    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 10px;
     font-size: 25px;
@@ -31,20 +85,47 @@
     height: auto;
     font-size: 2ch;
   }
+
+  .sala-aula{
+    background-color: rgb(255, 0, 0, 0.8);  
+  }
+
+  
+  .sala-aula{
+    background-color: rgb(0, 255, 0, 0.8);
+  }
   
   .sala-aula:hover{
     cursor: pointer;
-    background-color: rgba(194, 183, 183, 0.753);
+    background-color: rgba(226, 231, 150, 0.753);
   }
   
   /*Esses códigos foram tirados do site "https://www.w3schools.com/w3css/4/w3.css"*/
   .modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
-  .conteudo-modal{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+  .conteudo-modal{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px;border-radius: 10px;}
   .teal,.hover-teal:hover{color:#fff!important;background-color:#6D74C6!important}
-  .container,.panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+  .container,.panel{padding:0.01em 16px}
+  .w3-panel{margin-top:16px;margin-bottom:16px}
   .animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
   .black,.hover-black:hover{color:#fff!important;background-color:#000!important}
-  .fechar-modal{color: #000; float: right; background-color: antiquewhite; border-radius: 10%;}
+  .fechar-modal{color: #000; float: right; background-color: antiquewhite; border-radius: 15%;}
   .fechar-modal:hover{cursor: pointer;background-color: rgba(194, 183, 183, 0.753);}
   .inputs-modal{margin-top:10px; margin-left: auto;}
+  table {font-family: arial, sans-serif;border-collapse: collapse;width: 100%;}
+  td, th {border: 1px solid #dddddd;text-align: left;padding: 8px;}
+  tr:nth-child(even) {background-color: #dddddd;}
   /*Esses foram os códigos tirados do site "https://www.w3schools.com/w3css/4/w3.css"*/
+  
+.container{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+}
+
+.fechar-modal{
+  padding: 0px 3px 3px 3px;
+}
+
+.inputs-modal{
+    padding: 3px;
+  }
