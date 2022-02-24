@@ -1,5 +1,4 @@
 //Configurações do BD
-
 const Client = require('pg').Client;
 const cliente = new Client({
     user: "postgres",
