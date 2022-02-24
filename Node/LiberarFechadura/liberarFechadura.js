@@ -45,14 +45,6 @@ module.exports = async function LiberarFechadura(hexCardCode)
         console.log("Cliente desconectado")
         
     }
-    return {acesso, nome_pessoa};
+    return {acesso, nome_pessoa, cracha_pessoa};
 }
-//let acesso =  new Acesso();
-//Testar sem module.exports ( qnd for usar tem que seguir o padrão)
-    //var acessoPromisse = LiberarFechadura("590046E4BF");
-    //acessoPromisse.then( function(acessoPromisse){
-        //acesso.SetAcesso = acessoPromisse.acesso;
-        //acesso.SetNomePessoa = acessoPromisse.nome_pessoa;
-        //console.log(acesso);
-   // });
 

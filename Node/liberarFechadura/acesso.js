@@ -1,6 +1,5 @@
-//Importa funcao
 var LiberarFechadura = require('./liberarFechadura');
-//Classe Acesso
+
 class Acesso{
     constructor(acesso , nome_pessoa, cracha_pessoa){
         this.acesso =  acesso;
@@ -26,17 +25,26 @@ class Acesso{
     {
         return this.nome_pessoa;
     }
-    get GetCracha_Pessoa()
+    get GetCrachaPessoa()
     {
         return this.cracha_pessoa;
     }
 }
 var acesso =  new Acesso();
 
-acesso.SetCrachaPessoa = "590046E4BF";
+//Cartão lido pela fechadura
+var cracha_entrada = "590046E4BF";
 
-const acessoPromisse = LiberarFechadura(acesso.cracha_pessoa);
+function Armazenar(acesso_dado, nome_pessoa, cracha_pessoa)
+{
+    acesso.SetAcesso = acesso_dado;
+    acesso.SetNomePessoa = nome_pessoa;
+    acesso.SetCrachaPessoa =  cracha_pessoa;
+}
+
+const acessoPromisse = LiberarFechadura(cracha_entrada);
     acessoPromisse.then( function(acessoPromisse){
-        return acesso.SetAcesso = acessoPromisse.acesso , acesso.SetNomePessoa = acessoPromisse.nome_pessoa
+        Armazenar(acessoPromisse.acesso, acessoPromisse.nome_pessoa, acessoPromisse.cracha_pessoa);
+        console.log(acesso.GetAcesso + " " +acesso.GetNomePessoa + " " + acesso.GetCrachaPessoa);
     });
-    console.log(acesso);
+    
