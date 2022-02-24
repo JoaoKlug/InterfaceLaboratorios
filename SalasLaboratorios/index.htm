@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TCC - Teste</title>
+        <title>Sistema para Controle de Laboratórios</title>
+        <link rel="shortcut icon" type="imagex/png" href="../Imagens/IFPRicon.png">
         <meta name="description" content="Este é o site de controle de salas e laboratórios do Institúto Federal do Paraná.">
         <meta name="author" content="Augusto, Pedro e João Gabriel">
         <meta charset="UTF-8">
@@ -34,9 +35,11 @@
 
         <article id="laboratorios-ifpr">
         <div class="grid-andar3">
-          <div class="labinfo">Terceiro Andar</div>
+          <div class="labinfo" id="terceiroandar">Terceiro Andar</div>
             
-          <button onclick="document.getElementById('id302').style.display='block'" class="sala-aula">Laboratório 2</button>
+
+
+          <button onclick="document.getElementById('id302').style.display='block'" class="sala-aula" id="lab2">Laboratório 2</button>
             <div id="id302" class="modal">
               <div class="conteudo-modal">
                 <header class="container teal"> 
@@ -44,7 +47,34 @@
                   <h2>Laboratório 2</h2>
                 </header>
                 <div class="container">
-                  <p>Laboratório normal, com 40 computadores, disponível pra todas as turmas</p>
+                  <p>Laboratório normal, com 40 computadores, disponível pra todas as turmas.</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>Augusto</td>
+                      <td>12:45</td>
+                      <td>24/02/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                    <tr>
+                      <td>Albini</td>
+                      <td>07:15</td>
+                      <td>02/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                    <tr>
+                      <td>Pedro</td>
+                      <td>18:20</td>
+                      <td>02/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                  </table>
                   <br/><p>Disponibilidade: Disponível</p>
                 </div>
                 <footer class="container teal">
@@ -52,103 +82,435 @@
                   <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
                   <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
                   <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
-                  <br/><input class="inputs-modal"type="submit">
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
+                  </form>
+                </footer>
+              </div>
+            </div>
+
+
+  
+            <button onclick="document.getElementById('id303').style.display='block'" class="sala-aula" id="lab3">Laboratório 3</button>
+            <div id="id303" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id303').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório 3</h2>
+                </header>
+                <div class="container">
+                  <p>Laboratório normal, com 40 computadores, disponível pra todas as turmas.</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>João Gabriel</td>
+                      <td>15:20</td>
+                      <td>06/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                    <tr>
+                      <td>Ricardo</td>
+                      <td>07:15</td>
+                      <td>07/03/2022</td>
+                      <td>Técnico</td>
+                    </tr>
+                    <tr>
+                      <td>Luiz</td>
+                      <td>14:00</td>
+                      <td>18/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                  </table>
+                  <br/><p>Disponibilidade: Disponível</p>
+                </div>
+                <footer class="container teal">
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
+                  </form>
+                </footer>
+              </div>
+            </div>         
+
+
+  
+          <button onclick="document.getElementById('id304').style.display='block'" class="sala-aula" id="lab4">Laboratório 4</button>
+            <div id="id304" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id304').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório 4</h2>
+                </header>
+                <div class="container">
+                  <p>Laboratório normal, com 40 computadores, disponível pra todas as turmas.</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>Lucas</td>
+                      <td>18:40</td>
+                      <td>02/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                    <tr>
+                      <td>Elivelton</td>
+                      <td>07:15</td>
+                      <td>03/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                    <tr>
+                      <td>Luzia</td>
+                      <td>18:55</td>
+                      <td>13/03/2022</td>
+                      <td>Técnico</td>
+                    </tr>
+                  </table>
+                  <br/><p>Disponibilidade: Disponível</p>
+                </div>
+                <footer class="container teal">
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
+                  </form>
+                </footer>
+              </div>
+            </div>
+
+
+            
+            <button onclick="document.getElementById('id305').style.display='block'" class="sala-aula" id="labjogos">Laboratório de Jogos</button>
+            <div id="id305" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id305').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório de Jogos</h2>
+                </header>
+                <div class="container">
+                  <p>Laboratório com computadores específicos de interesse ao curso de Jogos Digitais. Disponível preferêncialmente para Jogos Digitais.</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>Wendrell</td>
+                      <td>12:45</td>
+                      <td>02/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                    <tr>
+                      <td>Elisabeth</td>
+                      <td>08:55</td>
+                      <td>02/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                    <tr>
+                      <td>Sofia</td>
+                      <td>10:20</td>
+                      <td>02/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                  </table>
+                  <br/><p>Disponibilidade: Disponível</p>
+                </div>
+                <footer class="container teal">
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
+                  </form>
+                </footer>
+              </div>
+            </div>
+
+
+  
+          <button onclick="document.getElementById('id306').style.display='block'" class="sala-aula" id="labtelecom">Laboratório de Telecom</button>
+            <div id="id306" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id306').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório de Telecomunicações</h2>
+                </header>
+                <div class="container">
+                  <p>Laboratório de Telecomunicações, disponível para técnicos em Telecomunicações.</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>Enrico</td>
+                      <td>15:45</td>
+                      <td>04/03/2022</td>
+                      <td>Técnico</td>
+                    </tr>
+                    <tr>
+                      <td>Caio</td>
+                      <td>20:15</td>
+                      <td>07/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                    <tr>
+                      <td>Isabeli</td>
+                      <td>15:20</td>
+                      <td>24/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                  </table>
+                  <br/><p>Disponibilidade: Disponível</p>
+                </div>
+                <footer class="container teal">
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
                   </form>
                 </footer>
               </div>
             </div>
   
-            <button onclick="document.getElementById('id303').style.display='block'" class="sala-aula">Laboratório 3</button>
-            <div id="id303" class="modal">
-              <div class="conteudo-modal">
-                <header class="container teal"> 
-                  <span onclick="document.getElementById('id303').style.display='none'" 
-                  class="button display-topright">&times;</span>
-                  <h2>Modal Header</h2>
-                </header>
-                <div class="container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="container teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>         
-  
-          <button onclick="document.getElementById('id304').style.display='block'" class="sala-aula">Laboratório 4</button>
-            <div id="id304" class="modal">
-              <div class="conteudo-modal">
-                <header class="container teal"> 
-                  <span onclick="document.getElementById('id304').style.display='none'" 
-                  class="button display-topright">&times;</span>
-                  <h2>Modal Header</h2>
-                </header>
-                <div class="container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="container teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>
-            
-            <button onclick="document.getElementById('id305').style.display='block'" class="sala-aula">Laboratório de Jogos</button>
-            <div id="id305" class="modal">
-              <div class="conteudo-modal">
-                <header class="container teal"> 
-                  <span onclick="document.getElementById('id305').style.display='none'" 
-                  class="button display-topright">&times;</span>
-                  <h2>Modal Header</h2>
-                </header>
-                <div class="container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="container teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>
-  
-          <button onclick="document.getElementById('id306').style.display='block'" class="sala-aula">Laboratório de Telecom</button>
-            <div id="id306" class="modal">
-              <div class="conteudo-modal">
-                <header class="container teal"> 
-                  <span onclick="document.getElementById('id306').style.display='none'" 
-                  class="button display-topright">&times;</span>
-                  <h2>Modal Header</h2>
-                </header>
-                <div class="container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="container teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>
-  
-          <button onclick="document.getElementById('id301').style.display='block'" class="sala-aula">Laboratório de Projetos</button>
+
+
+          <button onclick="document.getElementById('id301').style.display='block'" class="sala-aula" id="labprojeto">Laboratório de Projetos</button>
             <div id="id301" class="modal">
               <div class="conteudo-modal">
                 <header class="container teal"> 
-                  <span onclick="document.getElementById('id301').style.display='none'" 
-                  class="button display-topright">&times;</span>
-                  <h2>Modal Header</h2>
+                  <span onclick="document.getElementById('id301').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório de Projetos</h2>
                 </header>
                 <div class="container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
+                  <p>Laboratório normal, com 40 computadores, disponível pra todas as turmas, com preferência para uso da diciplina de Projetos.</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>Beatriz</td>
+                      <td>08:25</td>
+                      <td>01/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                    <tr>
+                      <td>Elaini</td>
+                      <td>10:15</td>
+                      <td>01/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                    <tr>
+                      <td>Paulo</td>
+                      <td>11:40</td>
+                      <td>01/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                  </table>
+                  <br/><p>Disponibilidade: Disponível</p>
                 </div>
                 <footer class="container teal">
-                  <p>Modal Footer</p>
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
+                  </form>
                 </footer>
               </div>
           </div>
-        </div>
+
+
+
+          <div class="labinfo" id="terreo">Terreo</div>
+            
+
+
+          <button onclick="document.getElementById('id101').style.display='block'" class="sala-aula" id="lab1">Laboratório 1</button>
+            <div id="id101" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id101').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório 1</h2>
+                </header>
+                <div class="container">
+                  <p>Laboratório normal, com 40 computadores, disponível pra todas as turmas</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>Nunes</td>
+                      <td>11:40</td>
+                      <td>18/03/2022</td>
+                      <td>Técnico</td>
+                    </tr>
+                    <tr>
+                      <td>Albini</td>
+                      <td>14:00</td>
+                      <td>18/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                    <tr>
+                      <td>José</td>
+                      <td>15:30</td>
+                      <td>18/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                  </table>
+                  <br/><p>Disponibilidade: Disponível</p>
+                </div>
+                <footer class="container teal">
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
+                  </form>
+                </footer>
+                </footer>
+              </div>
+            </div>
+
+
+
+          <div class="labinfo" id="labtecnico">Laboratórios Técnicos</div>
+          <button onclick="document.getElementById('id201').style.display='block'" class="sala-aula" id="labeletronica">Laboratório de Eletrônica</button>
+            <div id="id201" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id201').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório de Eletrônica</h2>
+                </header>
+                <div class="container">
+                  <p>Laboratório reservado para estudantes de eletrônica. Possui equipamentos referentes às matérias técnicas do curso de Eletrônica</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>Augusto</td>
+                      <td>15:45</td>
+                      <td>05/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                    <tr>
+                      <td>Gabriel</td>
+                      <td>18:15</td>
+                      <td>05/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                    <tr>
+                      <td>Henrique</td>
+                      <td>07:50</td>
+                      <td>07/03/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                  </table>
+                  <br/><p>Disponibilidade: Disponível</p>
+                </div>
+                <footer class="container teal">
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
+                  </form>
+                </footer>
+                </footer>
+              </div>
+            </div>
+
+
+
+          <div class="labinfo" id="predionovo">Prédio Novo</div>
+          <button onclick="document.getElementById('id401').style.display='block'" class="sala-aula" id="labedificacao">Laboratório de Edificações</button>
+            <div id="id401" class="modal">
+              <div class="conteudo-modal">
+                <header class="container teal"> 
+                  <span onclick="document.getElementById('id401').style.display='none'" class="fechar-modal">&times;</span>
+                  <h2>Laboratório de Edificações</h2>
+                </header>
+                <div class="container">
+                  <p>Laboratório normal, com 40 computadores, de uso preferêncial para a turma de Edificações</p><br/>
+                  <p>Informações de agendamento:</p>
+                  <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Horário</th>
+                      <th>Data</th>
+                      <th>Tipo</th>
+                    </tr>
+                    <tr>
+                      <td>Máriam</td>
+                      <td>14:15</td>
+                      <td>28/02/2022</td>
+                      <td>Professor</td>
+                    </tr>
+                    <tr>
+                      <td>João</td>
+                      <td>07:15</td>
+                      <td>03/03/2022</td>
+                      <td>Técnico</td>
+                    </tr>
+                    <tr>
+                      <td>Luiz</td>
+                      <td>13:10</td>
+                      <td>15/03/2022</td>
+                      <td>Aluno</td>
+                    </tr>
+                  </table>
+                  <br/><p>Disponibilidade: Disponível</p>
+                </div>
+                <footer class="container teal">
+                  <form>
+                  <br/>Insira a data desejada: <input class="inputs-modal" type="datetime-local" required>
+                  <br/>Insira seu gmail: <input class="inputs-modal" type="email" required>
+                  <br/>Insira seu nome: <input class="inputs-modal" type="text" required>
+                  <br/><input class="inputs-modal" type="submit" value="Agendar">
+                  </form>
+                </footer>
+                </footer>
+              </div>
+            </div>
+
+
+
+        </div>        
       </article>
+
+
 
     </body>
 </html>
