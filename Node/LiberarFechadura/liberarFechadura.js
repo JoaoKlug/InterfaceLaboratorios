@@ -25,7 +25,7 @@ module.exports = async function LiberarFechadura(hexCardCode)
             var ativo = resultado.rows[0].ativo;
 
         resultado = await cliente.query("select id_cargo_pessoa from tbPessoa where cracha_pessoa = '" + cracha_pessoa + "';")
-            var id_cargo_pessoa = Number(resultado.rows[0].id_cargo_pessoa);
+            var id_cargo_pessoa = resultado.rows[0].id_cargo_pessoa;
 
         resultado = await cliente.query("select nome_cargo from tbCargo where id = '" + id_cargo_pessoa + "';")
             var nome_cargo = resultado.rows[0].nome_cargo;
