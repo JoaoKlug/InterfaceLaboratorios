@@ -1,3 +1,4 @@
+// definição das dependências
 const express = require('express')
 const path = require('path')
 const res = require('express/lib/response')
@@ -8,9 +9,9 @@ require('dotenv').config()
 
 let pool = new Pool()
 
-const port = 3000
+const port = 3000 // define a porta do servidor 
 
-app.use(morgan('dev'))
+app.use(morgan('dev')) // dependência que mostra informações a mais no terminal. útil para desenvolvimento
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
@@ -64,6 +65,6 @@ app.post('/info/upd', (req, res) =>{
     }
 })*/
 
-app.listen(port, () => {
+app.listen(port, () => { // faz com que o servidor rode na porta especificada
     console.log('server started on port ' + port)
 })

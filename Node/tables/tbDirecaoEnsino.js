@@ -8,6 +8,7 @@ const cliente = new Client({
     database: "db_tcc"
 })
 
+// PARA ATIVAR AS FUNÇÕES DESCOMENTE
 //consultarDirecaoEnsinoTabela()
 //consultarDirecaoEnsino('email@teste.com')
 //inserirDirecaoEnsino('email3@teste.com', 'senhaForte2', 'augusto')

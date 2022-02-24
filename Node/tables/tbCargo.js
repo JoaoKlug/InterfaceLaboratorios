@@ -8,9 +8,10 @@ const cliente = new Client({
     database: "db_tcc"
 })
 
+// PARA ATIVAR AS FUNÇÕES DESCOMENTE
 //consultarCargoTabela()
 //consultarCargo('professor')
-inserirCargo('servidor')
+//inserirCargo('servidor')
 //alterarCargo('nome_cargo', 'professor', 'aluno')
 //deletarCargo('professor')
 

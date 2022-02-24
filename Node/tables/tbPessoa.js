@@ -8,9 +8,10 @@ const cliente = new Client({
     database: "db_tcc"
 })
 
+// PARA ATIVAR AS FUNÇÕES DESCOMENTE
 //consultarPessoaTabela()
 //consultarPessoa('pedro')
-inserirPessoa('pedro', '7058559', '20193018817', 'professor', 'S','2019');
+//inserirPessoa('pedro', '7058559', '20193018817', 'professor', 'S','2019');
 //alterarPessoa('nome_pessoa', 'joao', 'jg')
 //deletarPessoa('jg')
 

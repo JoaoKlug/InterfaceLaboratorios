@@ -1,3 +1,14 @@
+//CONFIGURA O BD
+const Client = require('pg').Client;
+const cliente = new Client({
+    user: "postgres",
+    password: "root",
+    host: "localhost",
+    port: 5432,
+    database: "db_tcc"
+})
+
+// PARA ATIVAR AS FUNÇÕES DESCOMENTE
 //consultarRegistroTabela()
 //consultarRegistro('2022-02-20')
 //inserirRegistro('2022-02-06 12:36:34', 'LABINFO2', 'augusto')
