@@ -11,7 +11,7 @@ const cliente = new Client({
 // PARA ATIVAR AS FUNÇÕES DESCOMENTE
 //consultarCargoTabela()
 //consultarCargo('professor')
-//inserirCargo('servidor')
+//inserirCargo('aluno')
 //alterarCargo('nome_cargo', 'professor', 'aluno')
 //deletarCargo('professor')
 

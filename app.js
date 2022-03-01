@@ -5,6 +5,7 @@ const res = require('express/lib/response')
 const morgan = require('morgan')
 const app = express()
 const {Pool} = require('pg')
+var acesso = require('./Node/acesso/acesso')
 require('dotenv').config()
 
 let pool = new Pool()
@@ -152,10 +153,8 @@ app.post('/reqFechadura', (req, res) =>{
     var numCartao = req.body.numCartao
     var codigoLab = req.body.codigoLab
 
-    console.log('Número cartão: ' + numCartao)
-    console.log('Código laboratório: ' + codigoLab)
-
-    //acesso.receberDadosFechadura(numCartao, codigoLab)
+    acesso.receberDadosFechadura(numCartao, codigoLab)
+    console.log('enviado para o script acesso')
 })
 
 /*app.get('/info/get', (req, res) =>{

@@ -12,7 +12,7 @@ const cliente = new Client({
 //consultarFechaduraTabela()
 //consultarFechadura('LABINFO1')
 //inserirFechadura('LAB1')
-//alterarFechadura('nome_fechadura', 'LABINFO1', 'LABINFO2')
+//alterarFechadura('estado_fechadura', 'LAB1', 'true')
 //deletarFechadura('LABINFO2')
 
 //SELECT

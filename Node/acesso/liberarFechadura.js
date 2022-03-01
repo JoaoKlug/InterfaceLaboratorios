@@ -46,7 +46,7 @@ module.exports = async function LiberarFechadura(hexCardCode)
         } 
     }
     catch{
-        console.log("Ocorreu um erro")
+        console.log("Ocorreu um erro em liberar a fechadura")
     }
     finally{
         await cliente.end()

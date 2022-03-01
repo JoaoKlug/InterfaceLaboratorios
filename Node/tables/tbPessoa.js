@@ -11,8 +11,8 @@ const cliente = new Client({
 // PARA ATIVAR AS FUNÇÕES DESCOMENTE
 //consultarPessoaTabela()
 //consultarPessoa('pedro')
-//inserirPessoa('pedro', '7058559', '20193018817', 'professor', 'S','2019');
-//alterarPessoa('nome_pessoa', 'joao', 'jg')
+//inserirPessoa('joao', '07058559', '20193018818', 'aluno', 'S','2019');
+//alterarPessoa('cracha_pessoa', '7058559', '06224966')
 //deletarPessoa('jg')
 
 //SELECT

@@ -20,6 +20,7 @@ module.exports = function ConverterCartao(hexCardCode)
     let cardNumber = BinaryToDecimal(cardNumberBinary);
     
     let cracha = facilityCode*100000 + cardNumber;
+    console.log('Cartão convertido para weigand: ' + cracha)
     return cracha;
 }
 function DecimalToBinary(decimal)
