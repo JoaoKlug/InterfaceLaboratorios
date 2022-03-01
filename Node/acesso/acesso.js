@@ -44,6 +44,8 @@ const liberarFechaduraPromise = LiberarAcesso(cracha_entrada);
 
 liberarFechaduraPromise.then( function(liberarAcessoPromise){
     if(liberarAcessoPromise.acesso == true)
-    RegistrarAcesso(nome_fechadura,liberarAcessoPromise.nome_pessoa);
-    AlterarEstadoFechadura(nome_fechadura);
+    {
+        RegistrarAcesso(nome_fechadura,liberarAcessoPromise.nome_pessoa);
+        AlterarEstadoFechadura(nome_fechadura);
+    }
 });
