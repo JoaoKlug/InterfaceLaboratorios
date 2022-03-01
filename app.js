@@ -20,28 +20,32 @@ app.get('/', (req, res) =>{  //define a resposta para a resquest
 })
 
 //IMPORTAÇÃO DEMAIS PAGINAS HTML
-app.get('/index.html', (req, res) =>{  //define a resposta para a resquest
+app.get('/index.html', (req, res) =>{  
     res.sendFile(__dirname + "/SalasLaboratorios/index.html")
 })
 
-app.get('/Contato/index.html', (req, res) =>{  //define a resposta para a resquest
+app.get('/Contato/index.html', (req, res) =>{  
     res.sendFile(__dirname + "/SalasLaboratorios/Contato/index.html")
 })
 
-app.get('/DescricaoSalaLab/index.html', (req, res) =>{  //define a resposta para a resquest
+app.get('/DescricaoSalaLab/index.html', (req, res) =>{  
     res.sendFile(__dirname + "/SalasLaboratorios/DescricaoSalaLab/index.html")
 })
 
-app.get('/Login/index.html', (req, res) =>{  //define a resposta para a resquest
+app.get('/Login/index.html', (req, res) =>{  
     res.sendFile(__dirname + "/SalasLaboratorios/Login/index.html")
 })
 
-app.get('/Login/recuperarSenha.html', (req, res) =>{  //define a resposta para a resquest
+app.get('/Login/recuperarSenha.html', (req, res) =>{  
     res.sendFile(__dirname + "/SalasLaboratorios/Login/recuperarSenha.html")
 })
 
-app.get('/SobreProjeto/index.html', (req, res) =>{  //define a resposta para a resquest
+app.get('/SobreProjeto/index.html', (req, res) =>{  
     res.sendFile(__dirname + "/SalasLaboratorios/SobreProjeto/index.html")
+})
+
+app.get('/simfechadura.html', (req, res) =>{
+    res.sendFile(__dirname + "/SalasLaboratorios/simfechadura.html")
 })
 
 //DirecaoEnsino
@@ -139,6 +143,19 @@ app.get('/Jquery/jquery-3.6.0.min.js', (req, res) =>{
 //IMPORTAÇÃO JS FRONTEND
 app.get('/Js/cabecalho.js', (req, res) =>{
     res.sendFile(__dirname + "/Js/cabecalho.js")
+})
+
+//MÉTODOS
+
+//método que recebe os dados de 'simfechadura'
+app.post('/reqFechadura', (req, res) =>{
+    var numCartao = req.body.numCartao
+    var codigoLab = req.body.codigoLab
+
+    console.log('Número cartão: ' + numCartao)
+    console.log('Código laboratório: ' + codigoLab)
+
+    //acesso.receberDadosFechadura(numCartao, codigoLab)
 })
 
 /*app.get('/info/get', (req, res) =>{
