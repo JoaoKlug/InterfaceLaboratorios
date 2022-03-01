@@ -62,15 +62,7 @@ async function consultarRegistro(data_hora){
 }
 
 //INSERT
- module.exports = async function inserirRegistro(data_hora, nome_fechadura, nome_pessoa) {
-     const Client = require('pg').Client;
-     const cliente = new Client({
-         user: "postgres",
-         password: "root",
-         host: "localhost",
-         port: 5432,
-         database: "db_tcc"
-     })
+ module.exports = async function inserirRegistro(data_hora, nome_fechadura, nome_pessoa) { 
     try{
         console.log("Iniciando a conexão")
         await cliente.connect()
