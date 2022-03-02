@@ -155,8 +155,6 @@ app.post('/reqFechadura', (req, res) =>{
 
     acesso(numCartao, codigoLab)
     console.log('enviado para o script acesso')
-
-    req.body.trocaCor
 })
 
 app.listen(port, () => { // faz com que o servidor rode na porta especificada

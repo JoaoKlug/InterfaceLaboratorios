@@ -65,11 +65,11 @@
     grid-column: 5 /span 7;
     grid-row: 2;
   }
-  #labeletronica{
+  #labeletro{
     grid-column: 1 / span 3;
     grid-row: 5;
   }
-  #labedificacao{
+  #labedifica{
     grid-column: 5 / span 7;
     grid-row: 5;
   }

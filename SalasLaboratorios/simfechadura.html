@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
     <title>SIMULAÇÃO DA FECHADURA</title>
 </head>
-<body>
+<body onload="trocarCor()">
     <h1>SIMULAÇÃO FECHADURA  LAB1</h1>
 
     <p>Esta página apenas simula a fechadura. Abaixo tem-se o campo para o código do cartão, que será lido pelo sensor RFID do Arduino e o código do laboratório, que será definido no script de cada Arduino.</p>
@@ -20,18 +21,20 @@
 
     <br><br>
     <button style="background-color: #FF0000;" id="estadofechadura">Estado fechadura</button>
-
-    <br>
-    <button onClick="trocaCor()">Teste trocar</button>
     
-    <script id="trocaCor">
+    <script>
         //script que muda a cor dos elemento especificado pelo id
-        function trocaCor(){
+        function trocarCor(){
+            var retornarEstadoFechadura = require('../Node/retornarEstadoFechadura') //importa o método que retorna o estado da fechadura
+
+            var nome_fechadura = "LAB1" //variável que define o nome da fechadura atual
+            var estadofechadura = retornarEstadoFechadura(nome_fechadura) //atribui o estado da fechadura no momento
+
             var element = document.getElementById("estadofechadura")
-            if (element.style.backgroundColor == "#FF0000"){
-                element.style.backgroundColor = "#00ff00";
-            }else{
+            if (estadofechadura == false){
                 element.style.backgroundColor = "#FF0000";
+            }else{
+                element.style.backgroundColor = "#00ff00";
             }
         }
     </script>

@@ -114,10 +114,6 @@ module.exports = async function alterarFechadura(atributo, nome_fechadura, valor
     }
 }
 
-function trocarCor(){
-    
-}
-
 //DELETE
 async function deletarFechadura(nome_fechadura) {
     /**
