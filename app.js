@@ -148,13 +148,15 @@ app.get('/Js/cabecalho.js', (req, res) =>{
 
 //MÉTODOS
 
-//método que recebe os dados de 'simfechadura'
+//método que recebe os dados de 'simfechadura' e os envia para acesso
 app.post('/reqFechadura', (req, res) =>{
     var numCartao = req.body.numCartao
     var codigoLab = req.body.codigoLab
 
-    acesso.receberDadosFechadura(numCartao, codigoLab)
+    acesso(numCartao, codigoLab)
     console.log('enviado para o script acesso')
+
+    req.body.trocaCor
 })
 
 app.listen(port, () => { // faz com que o servidor rode na porta especificada

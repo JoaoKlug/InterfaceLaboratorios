@@ -98,16 +98,24 @@ module.exports = async function alterarFechadura(atributo, nome_fechadura, valor
         
         console.log("Valor alterado na tabela")
 
+        if(atributo == 'estado-fechadura'){
+            trocarCor()
+        }
+
         const resultado = await cliente.query("select * from tbFechadura")
         console.table(resultado.rows)
     }
     catch{
-        console.log("Ocorreu um erro no alterarCargo. Erro: " + ex)
+        console.log("Ocorreu um erro no alterarFechadura. Erro: " + ex)
     }
     finally{
         await cliente.end()
         console.log("Cliente desconectado")
     }
+}
+
+function trocarCor(){
+    
 }
 
 //DELETE

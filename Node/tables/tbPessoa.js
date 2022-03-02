@@ -9,7 +9,7 @@ const cliente = new Client({
 })
 
 // PARA ATIVAR AS FUNÇÕES DESCOMENTE
-//consultarPessoaTabela()
+consultarPessoaTabela()
 //consultarPessoa('pedro')
 //inserirPessoa('joao', '07058559', '20193018818', 'aluno', 'S','2019');
 //alterarPessoa('cracha_pessoa', '7058559', '06224966')

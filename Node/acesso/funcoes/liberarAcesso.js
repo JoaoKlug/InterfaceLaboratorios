@@ -26,9 +26,9 @@ module.exports = async function LiberarFechadura(hexCardCode)
     cracha_pessoa = ConverterCartao(hexCardCode);
 
     try{
-        console.log("Iniciando a conexão")
+        console.log("Iniciando a conexão em liberarAcesso")
         await cliente.connect()
-        console.log("Conexão bem sucedida")
+        console.log("Conexão bem sucedida em liberarAcesso")
 
         //Consulta se o cartão da pessoa está ativo 
         var resultado = await cliente.query("select ativo from tbPessoa where cracha_pessoa = '" + cracha_pessoa + "';")
@@ -58,7 +58,7 @@ module.exports = async function LiberarFechadura(hexCardCode)
     }
     finally{
         await cliente.end()
-        console.log("Cliente desconectado")
+        console.log("Cliente desconectado de liberarFechadura")
     }
     return {acesso, nome_pessoa};
 }

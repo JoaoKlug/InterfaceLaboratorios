@@ -33,6 +33,7 @@ module.exports = function ConverterCartao(hexCardCode)
 
     //Junta os dois formando o cracha
     let cracha = facilityCode*100000 + cardNumber;
+    console.log("Número do cartão convertido: " + cracha)
     return cracha;
 }
 //Converte Decimal para Binário
