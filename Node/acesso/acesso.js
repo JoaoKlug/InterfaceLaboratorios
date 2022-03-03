@@ -14,8 +14,9 @@ module.exports = function acesso(numCartao, codigoLab){
     //Importação das funções
     var LiberarAcesso = require('./funcoes/liberarAcesso');
     var RegistrarAcesso = require('./funcoes/registrarAcesso');
-    var AlterarEstadoFechadura = require('./funcoes/alterarEstadoFechadura')
-
+    var AlterarEstadoFechadura = require('./funcoes/alterarEstadoFechadura');
+    var retornarEstadoFechadura = require('./funcoes/retornarEstadoFechadura');
+    var trocarCor =  require("../../Js/trocarCor");
 
     /*Como liberarFechadura é uma função async(de espera), 
     retornando os valores em array Promise, devemos receber o retorno em uma variavel
@@ -28,7 +29,12 @@ module.exports = function acesso(numCartao, codigoLab){
         {
             RegistrarAcesso(nome_fechadura,liberarAcessoPromise.nome_pessoa);
             AlterarEstadoFechadura(nome_fechadura);
-
+            const estadoFechaduraProisse = retornarEstadoFechadura(nome_fechadura);
+            estadoFechaduraProisse.then(function(estadoFechadura)
+            {
+                trocarCor(estadoFechadura.estado_fechadura);
+            })
+            
         }else{
             console.log('Acesso negado')
         }

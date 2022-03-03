@@ -146,6 +146,10 @@ app.get('/Js/cabecalho.js', (req, res) =>{
     res.sendFile(__dirname + "/Js/cabecalho.js")
 })
 
+app.get('/Js/trocarCor.js', (req,res) =>{
+    res.sendFile(__dirname + "/Js/trocarCor.js")
+})
+
 //MÉTODOS
 
 //método que recebe os dados de 'simfechadura' e os envia para acesso
@@ -153,7 +157,9 @@ app.post('/reqFechadura', (req, res) =>{
     var numCartao = req.body.numCartao
     var codigoLab = req.body.codigoLab
 
-    acesso(numCartao, codigoLab)
+    var codigoLabUp = codigoLab.toUpperCase();
+
+    acesso(numCartao, codigoLabUp)
     console.log('enviado para o script acesso')
 })
 

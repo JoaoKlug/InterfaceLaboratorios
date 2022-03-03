@@ -90,9 +90,9 @@ async function inserirFechadura(nome_fechadura) {
 //UPDATE
 module.exports = async function alterarFechadura(atributo, nome_fechadura, valorNovo) {
     try{
-        console.log("Iniciando a conexão")
+        console.log("Iniciando a conexão alterarFechadura")
         await cliente.connect()
-        console.log("Conexão bem sucedida")
+        console.log("Conexão bem sucedida alterarFechadura")
 
         await cliente.query("update tbFechadura set "+ atributo + " = '" + valorNovo + "' where nome_fechadura = '" + nome_fechadura +"';")
         

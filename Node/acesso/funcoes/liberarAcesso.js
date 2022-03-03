@@ -2,7 +2,7 @@
 Recebe o codigo do cartão, verifica à quem ele pertence e se ele pode abrir uma Fechadura
 Retorna se o acesso foi liberado e o nome de quem tentou acessar
 */
-module.exports = async function LiberarFechadura(hexCardCode)
+module.exports = async function LiberarAcesso(hexCardCode)
 {
     //Conecta BD
     const Client = require('pg').Client;

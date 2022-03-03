@@ -1,5 +1,5 @@
 /*
-Recebe o codigo hexadecimal do cartao(hexCardCode-S)
+Recebe o codigo hexadecimal do cartao(hexCardCode-S-)
 Retorna o codigo Wigand do cartao(cracha)
 */
 module.exports = function ConverterCartao(hexCardCode)
