@@ -1,7 +1,5 @@
 module.exports = function acesso(numCartao, codigoLab){
     //Informações recebidas pelo Arduino
-    //var cracha_entrada = "590046E4BF";
-    //var nome_fechadura = "lab1";
     var cracha_entrada = numCartao
     var nome_fechadura = codigoLab
 

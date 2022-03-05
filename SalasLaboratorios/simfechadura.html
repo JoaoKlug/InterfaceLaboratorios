@@ -22,6 +22,13 @@
     <br><br>
     <button id="estadofechadura">Estado fechadura</button>
     
-    <script type="text/javascript" src="../Js/trocarCor.js"></script>
+    <button onClick="trocaCor()">Trocar cor Estado fechadura</button>
+      <script>
+        //script que muda a cor dos elemento especificado pelo id
+        function trocaCor(){
+            var element = document.getElementById("estadofechadura")
+            element.style.backgroundColor = "#FF0000";
+        }
+      </script>
 </body>
 </html>
