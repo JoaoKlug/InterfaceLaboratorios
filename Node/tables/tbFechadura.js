@@ -97,11 +97,6 @@ module.exports = async function alterarFechadura(atributo, nome_fechadura, valor
         await cliente.query("update tbFechadura set "+ atributo + " = '" + valorNovo + "' where nome_fechadura = '" + nome_fechadura +"';")
         
         console.log("Valor alterado na tabela")
-
-        if(atributo == 'estado-fechadura'){
-            trocarCor()
-        }
-
         const resultado = await cliente.query("select * from tbFechadura")
         console.table(resultado.rows)
     }
