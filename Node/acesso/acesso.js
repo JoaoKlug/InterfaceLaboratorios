@@ -29,8 +29,8 @@ module.exports = function acesso(numCartao, codigoLab){
         {
             RegistrarAcesso(nome_fechadura,liberarAcessoPromise.nome_pessoa);
             AlterarEstadoFechadura(nome_fechadura);
-            const estadoFechaduraProisse = retornarEstadoFechadura(nome_fechadura);
-            estadoFechaduraProisse.then(function(estadoFechadura)
+            const estadoFechaduraPromise = retornarEstadoFechadura(nome_fechadura);
+            estadoFechaduraPromise.then(function(estadoFechadura)
             {
                 trocarCor(estadoFechadura.estado_fechadura);
             })

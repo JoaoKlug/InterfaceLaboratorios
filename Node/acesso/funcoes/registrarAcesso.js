@@ -1,5 +1,5 @@
 /*
-Insere no BD, o registro de quem acessou qual labaratório e em qual horário
+Insere no BD o registro de quem acessou, qual labaratório e em qual horário
 */
 module.exports = function RegistrarAcesso(nome_fechadura, nome_pessoa)
 {
