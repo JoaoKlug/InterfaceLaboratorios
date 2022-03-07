@@ -136,6 +136,10 @@ app.get('/Imagens/Integrantes/PedroFilla.jpeg', (req, res) =>{
     res.sendFile(__dirname + "/Imagens/Integrantes/PedroFilla.jpeg")
 })
 
+app.get('/Imagens/Integrantes/FabioAlbini.jpg', (req, res) =>{
+    res.sendFile(__dirname + "/Imagens/Integrantes/FabioAlbini.jpg")
+})
+
 //IMPORTAÇÃO JQUERY
 app.get('/Jquery/jquery-3.6.0.min.js', (req, res) =>{
     res.sendFile(__dirname + "/Jquery/jquery-3.6.0.min.js")
